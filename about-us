@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>درباره ما | گالری هنری رنسانس</title>
+  <title>درباره ما | گالری هنری آرت ویژن</title>
   <style>
     :root {
       --brown: #8B552E;
@@ -96,7 +96,7 @@
   <header>درباره ما</header>
   <div class="container">
     <div class="intro">
-      <h2>گالری هنری رنسانس</h2>
+      <h2>گالری هنری آرت ویژن</h2>
       <p>جایی که هنر، تاریخ و زیبایی با هم تلاقی می‌کنند.</p>
     </div>
 
@@ -112,19 +112,14 @@
       <h3>تیم ما</h3>
       <div class="team">
         <div class="member">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/User_Avatar.png/240px-User_Avatar.png" alt="مدیر گالری">
-          <h4>سارا نادری</h4>
+          <img src="a.png" alt="مدیر گالری">
+          <h4>سوگند قاسمیان</h4>
           <p>مدیر گالری و کیوریتور آثار</p>
         </div>
         <div class="member">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/User_Avatar.png/240px-User_Avatar.png" alt="طراح وب">
-          <h4>مانی حسینی</h4>
+          <img src="a.png" alt="طراح وب">
+          <h4>مدینا نکو</h4>
           <p>طراح وب و مسئول تجربه کاربری</p>
-        </div>
-        <div class="member">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/User_Avatar.png/240px-User_Avatar.png" alt="پژوهشگر هنری">
-          <h4>نگار فراهانی</h4>
-          <p>پژوهشگر تاریخ هنر و نویسنده مقالات</p>
         </div>
       </div>
 
