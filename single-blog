@@ -78,7 +78,7 @@
   <header>میکل‌آنژ بواناروتی</header>
   <div class="container">
     <div class="hero">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Michelangelo_Buonarroti.jpg" alt="Michelangelo portrait">
+      <img src="img/m.jpg" alt="Michelangelo portrait">
     </div>
     <div class="content">
       <h2>دربارهٔ میکل‌آنژ</h2>
@@ -94,7 +94,6 @@
     </div>
   </div>
   <footer>
-    طراحی شده با الهام از رنگ‌های کلاسیک رنسانس
-  </footer>
+تمامی حقوق متعلق به گالری میباشد.  </footer>
 </body>
 </html>
