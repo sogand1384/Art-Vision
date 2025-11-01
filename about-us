@@ -1,253 +1,142 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>درباره ما — گالری شیک</title>
-
-  <!-- فونت (از گوگل) -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tajawal:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>درباره ما | گالری هنری رنسانس</title>
   <style>
-    :root{
-      /* پالت رنگی (تقریبی از پالت شما) */
-      --brown: #8B5A2B;       /* قهوه‌ای */
-      --tan:   #D6A95A;       /* طلایی-گرانج */
-      --teal:  #5F8B86;       /* فیروزه‌ای تیره */
-      --beige: #ECDCC6;       /* کرم روشن */
-      --mint:  #BFD8C6;       /* سبز ملایم */
-      --bg-dark: #0f0f0f;     /* دیوار گالری تیره */
-      --card-shadow: rgba(11,11,11,0.45);
+    :root {
+      --brown: #8B552E;
+      --golden: #D6A35A;
+      --beige: #EBD7B2;
+      --mint: #B7C6AF;
+      --teal: #62857D;
     }
 
-    html,body{
-      height:100%;
-      margin:0;
-      font-family: "Noto Sans Tajawal", "Tahoma", sans-serif;
-      background: linear-gradient(180deg,var(--bg-dark) 0%, #0b0b0b 100%);
-      color:var(--beige);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+    body {
+      font-family: "Vazirmatn", sans-serif;
+      background-color: var(--beige);
+      color: #2d2d2d;
+      margin: 0;
+      line-height: 1.8;
     }
 
-    /* کانتینر کلی */
-    .container{
-      max-width:1100px;
-      margin:40px auto;
-      padding:28px;
+    header {
+      background-color: var(--brown);
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      font-size: 2rem;
     }
 
-    /* کارت هِرو */
-    .hero{
-      background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.55));
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow: 0 10px 30px var(--card-shadow);
-      display:grid;
-      grid-template-columns: 1fr 420px;
-      gap:24px;
-      align-items:stretch;
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      background-color: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
     }
 
-    /* عکس بزرگ (انتخاب شده از تصاویر شما) */
-    .hero .photo{
-      position:relative;
-      min-height:360px;
-      background:#111;
-    }
-    .hero .photo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-      transform: scale(1.02);
-      transition: transform .9s ease, filter .8s ease;
-      will-change: transform;
-      filter: contrast(.95) saturate(.9);
-    }
-    .hero .photo:hover img{
-      transform: scale(1.06);
-      filter: contrast(1.06) saturate(1);
+    .intro {
+      background-color: var(--teal);
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
     }
 
-    /* ستون متن درباره ما */
-    .hero .about{
-      padding:30px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-    }
-    .kicker{
-      display:inline-block;
-      padding:6px 12px;
-      border-radius:999px;
-      background: rgba(255,255,255,0.04);
-      color:var(--tan);
-      font-weight:600;
-      letter-spacing:0.6px;
-      margin-bottom:16px;
-    }
-    h1{
-      margin:0 0 12px 0;
-      font-size:28px;
-      color:var(--beige);
-      line-height:1.05;
-    }
-    p.lead{
-      margin:0 0 18px 0;
-      color: rgba(236,220,198,0.92);
-      font-size:15px;
-      opacity:0.95;
+    .content {
+      padding: 2rem;
+      background-color: var(--mint);
     }
 
-    /* نکات بصری کوچک */
-    .info-list{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:14px;
-    }
-    .badge{
-      background: linear-gradient(90deg,var(--mint), rgba(191,216,198,0.9));
-      color: #083;
-      padding:8px 12px;
-      border-radius:10px;
-      font-weight:600;
-      box-shadow: 0 6px 18px rgba(95,139,134,0.08);
-      font-size:13px;
-      color:#083628;
+    h2, h3 {
+      color: var(--brown);
     }
 
-    /* بخش شرح مفصل */
-    .content{
-      margin-top:26px;
-      display:grid;
-      grid-template-columns: 1fr 340px;
-      gap:24px;
-      align-items:start;
-    }
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
-      border-radius:12px;
-      padding:18px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-      color:var(--beige);
-    }
-    .card h3{
-      margin:0 0 10px 0;
-      color:var(--tan);
-    }
-    .card p{
-      margin:0;
-      color: rgba(236,220,198,0.9);
-      line-height:1.65;
-      font-size:14px;
+    p {
+      font-size: 1.1rem;
+      text-align: justify;
     }
 
-    /* گالری کوچک تصاویر (از تصاویر آپلود شده) */
-    .mini-gallery{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
-      margin-top:12px;
-    }
-    .mini-gallery img{
-      width:100%;
-      height:120px;
-      object-fit:cover;
-      border-radius:8px;
-      display:block;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.45);
-      transition: transform .45s cubic-bezier(.2,.9,.2,1), opacity .4s;
-    }
-    .
-mini-gallery img:hover{ transform: translateY(-6px) scale(1.02); opacity:0.98;}
-
-    /* فوتر ساده */
-    footer{
-      margin-top:28px;
-      text-align:center;
-      color: rgba(236,220,198,0.6);
-      font-size:13px;
-      opacity:0.9;
+    .team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
 
-    /* واکنش‌گرا */
-    @media (max-width:980px){
-      .hero{ grid-template-columns:1fr; }
-      .content{ grid-template-columns:1fr; }
-      .hero .photo{ min-height:300px; }
+    .member {
+      background-color: var(--beige);
+      border-radius: 1rem;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    /* انیمیشن ظریف ورودی */
-    .fade-in{
-      animation: fadeUp .9s cubic-bezier(.2,.9,.2,1) both;
+    .member img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid var(--golden);
     }
-    @keyframes fadeUp{
-      from{ transform: translateY(14px); opacity:0;}
-      to{ transform: translateY(0); opacity:1;}
+
+    footer {
+      background-color: var(--golden);
+      text-align: center;
+      padding: 1rem;
+      color: #fff;
+      font-size: 0.9rem;
     }
   </style>
 </head>
-
 <body>
-  <div class="container fade-in">
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="about-title">
-      <div class="photo" aria-hidden="false">
-        <!-- این عکس را از تصاویر آپلود شده انتخاب کردم -->
-        <img src="./IMG_8952.jpeg" alt="راهرو گالری - نمای داخلی" />
-      </div>
+  <header>درباره ما</header>
+  <div class="container">
+    <div class="intro">
+      <h2>گالری هنری رنسانس</h2>
+      <p>جایی که هنر، تاریخ و زیبایی با هم تلاقی می‌کنند.</p>
+    </div>
 
-      <aside class="about">
-        <div class="kicker">گالری شیک — درباره ما</div>
-        <h1 id="about-title">ما چه کسی هستیم؟</h1>
-        <p class="lead">
-          گالری شیک محفلی‌ست برای آثار نقاشی و هنر تجسمی؛ ما مجموعه‌ای دقیق و منتخب از آثار کلاسیک و معاصر را در فضایی مدرن و با نورپردازی حرفه‌ای به نمایش می‌گذاریم. تمرکز ما روی تجربهٔ دیداری عمیق، حسِ حضور و احترام به هر اثر است.
-        </p>
+    <div class="content">
+      <h3>داستان ما</h3>
+      <p>
+        گالری هنری رنسانس با هدف معرفی آثار برجستهٔ هنرمندان بزرگ جهان و ایجاد پلی میان گذشته و امروز هنر تأسیس شد. ما باور داریم که هر اثر هنری، صدایی از تاریخ است که باید شنیده شود و الهام‌بخش نسل‌های آینده باشد.
+      </p>
+      <p>
+        مأموریت ما گردآوری و نمایش آثار هنری باارزش، معرفی هنرمندان نوظهور و برگزاری نمایشگاه‌هایی است که تفکر، احساس و زیبایی را در مخاطب برانگیزد.
+      </p>
 
-        <div class="info-list" aria-hidden="false">
-          <div class="badge">نمایشگاه‌های فصلی</div>
-          <div class="badge">بازدید با رزرو</div>
-          <div class="badge">کارگاه‌های هنری</div>
+      <h3>تیم ما</h3>
+      <div class="team">
+        <div class="member">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/User_Avatar.png/240px-User_Avatar.png" alt="مدیر گالری">
+          <h4>سارا نادری</h4>
+          <p>مدیر گالری و کیوریتور آثار</p>
         </div>
-
-        <!-- لینک‌های تماس مختصر -->
-        <div style="margin-top:18px; font-size:14px; color:rgba(236,220,198,0.9);">
-          <div><strong>آدرس:</strong> خیابان هنر، پلاک ۱۲</div>
-          <div style="margin-top:6px;"><strong>تماس:</strong> ۰۲۱-۱۲۳۴۵۶۷</div>
+        <div class="member">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/User_Avatar.png/240px-User_Avatar.png" alt="طراح وب">
+          <h4>مانی حسینی</h4>
+          <p>طراح وب و مسئول تجربه کاربری</p>
         </div>
-      </aside>
-    </section>
-
-    <!-- بخش محتوای تکمیلی -->
-    <section class="content">
-      <div class="card">
-        <h3>بیانِ هنری ما</h3>
-        <p>
-          هر نمایشگاه در گالری شیک با یک روایت بصری طراحی می‌شود؛ نور، قاب و فاصله‌گذاری طوری تنظیم می‌شود که بیننده را به تامل و گفتگو با اثر دعوت کند. ما در انتخاب آثار دقت می‌کنیم تا تنوع تاریخی و سبکی حفظ شود: از پرتره‌های کلاسیک تا تجربیات نو و ترکیبی.
-        </p>
-
-        <div style="margin-top:14px;" class="mini-gallery" aria-label="نمونه آثار">
-          <img src="./IMG_8951.jpeg" alt="اثر داخل گالری - شماره ۱" />
-          <img src="./IMG_8942.jpeg" alt="پرتره داخل گالری - شماره ۲" />
+        <div class="member">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/User_Avatar.png/240px-User_Avatar.png" alt="پژوهشگر هنری">
+          <h4>نگار فراهانی</h4>
+          <p>پژوهشگر تاریخ هنر و نویسنده مقالات</p>
         </div>
       </div>
 
-      <aside class="card">
-        <h3>بازدید و همکاری</h3>
-        <p>
-          اگر قصد بازدید گروهی، برگزاری نمایشگاه مشترک یا استقرار اثر را دارید، خوشحال می‌شویم هماهنگ کنیم. برای همکاری‌های هنری و کسب اطلاعات بیشتر با ایمیل گالری تماس بگیرید یا از طریق شماره تلفن رزرو نمایید.
-        </p>
-
-        <div style="margin-top:12px; display:flex; gap:10px; flex-direction:column;">
-          <a href="mailto:info@gallery.example" style="text-decoration:none; padding:10px 12px; border-radius:10px; font-weight:600; background:linear-gradient(90deg,var(--tan), var(--brown)); color:#fff; text-align:center;">ارسال ایمیل</a>
-          <a href="#" style="text-decoration:none; padding:10px 12px; border-radius:10px; font-weight:600; border:1px solid rgba(255,255,255,0.06); color:var(--beige); text-align:center; background:transparent;">رزرو بازدید</a>
-        </div>
-      </aside>
-    </section>
-
-    <footer>
-      © تمام حقوق متعلق به گالری است.
-    </footer>
+      <h3>ارتباط با ما</h3>
+      <p>
+        برای همکاری، پرسش یا پیشنهاد می‌توانید از طریق ایمیل <strong>info@renaissancegallery.com</strong> با ما در ارتباط باشید.
+      </p>
+    </div>
   </div>
+
+  <footer>
+    طراحی شده با الهام از رنگ‌های کلاسیک رنسانس — گالری هنری رنسانس © ۲۰۲۵
+  </footer>
 </body>
 </html>
