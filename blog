@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>بلاگ‌ها | گالری هنری رنسانس</title>
+  <title>بلاگ‌ها | گالری هنری آرت ویژن</title>
   <style>
     :root {
       --brown: #8B552E;
@@ -150,11 +150,31 @@
         </div>
       </div>
 
+      <!-- بلاگ جدید ۱ -->
+      <div class="card">
+        <img src="img/s.jpg" alt="شام آخر داوینچی">
+        <div class="card-content">
+          <h3>شام آخر؛ روایت مقدس در قاب داوینچی</h3>
+          <p>تحلیل اثر معروف لئوناردو داوینچی که داستان آخرین شام مسیح را با عمق روان‌شناسانه‌ای حیرت‌انگیز به تصویر می‌کشد.</p>
+          <a href="last-supper.html">مطالعه بیشتر</a>
+        </div>
+      </div>
+
+      <!-- بلاگ جدید ۲ -->
+      <div class="card">
+        <img src="img/b.jpg" alt="بهار بوتیچلی">
+        <div class="card-content">
+          <h3>بهار بوتیچلی؛ جشن رنگ‌ها و اسطوره‌ها</h3>
+          <p>اثری شاعرانه و پر از نمادهای اسطوره‌ای که عشق، باروری و زایش طبیعت را در قالبی الهام‌بخش نمایش می‌دهد.</p>
+          <a href="primavera.html">مطالعه بیشتر</a>
+        </div>
+      </div>
+
     </div>
   </div>
 
   <footer>
-  تمامی حقوق متعلق به گالری میباشد.
+    تمامی حقوق متعلق به گالری می‌باشد.
   </footer>
 </body>
 </html>
