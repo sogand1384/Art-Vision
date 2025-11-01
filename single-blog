@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>میکل‌آنژ | نابغهٔ رنسانس</title>
+  <style>
+    :root {
+      --brown: #8B552E;
+      --golden: #D6A35A;
+      --beige: #EBD7B2;
+      --mint: #B7C6AF;
+      --teal: #62857D;
+    }
+
+    body {
+      font-family: "Vazirmatn", sans-serif;
+      background-color: var(--beige);
+      color: #2d2d2d;
+      margin: 0;
+      line-height: 1.8;
+    }
+
+    header {
+      background-color: var(--brown);
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      background-color: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .hero {
+      background-color: var(--teal);
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero img {
+      max-width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .content {
+      padding: 2rem;
+      background-color: var(--mint);
+    }
+
+    h2 {
+      color: var(--brown);
+    }
+
+    p {
+      font-size: 1.1rem;
+      text-align: justify;
+    }
+
+    footer {
+      background-color: var(--golden);
+      text-align: center;
+      padding: 1rem;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>میکل‌آنژ بواناروتی</header>
+  <div class="container">
+    <div class="hero">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Michelangelo_Buonarroti.jpg" alt="Michelangelo portrait">
+    </div>
+    <div class="content">
+      <h2>دربارهٔ میکل‌آنژ</h2>
+      <p>
+        میکل‌آنژ بواناروتی، یکی از بزرگ‌ترین هنرمندان تاریخ بشر، در سال ۱۴۷۵ در کاپره‌زه ایتالیا متولد شد. او مجسمه‌ساز، نقاش، معمار و شاعر بود و آثارش نقطهٔ اوج جنبش رنسانس به‌شمار می‌روند.
+      </p>
+      <p>
+        شاهکارهایی چون «داوود»، «پیتا» و نقاشی‌های خیره‌کنندهٔ سقف کلیسای سیستین از جمله آثاری هستند که مهارت بی‌نظیر او را در ترکیب احساسات انسانی با زیبایی جسمانی به نمایش می‌گذارند. میکل‌آنژ نه‌تنها درک عمیقی از فرم انسانی داشت، بلکه در آثارش روح و فلسفهٔ رنسانس را مجسم کرد.
+      </p>
+      <p>
+        او در طول عمرش با هنرمندان بزرگی چون لئوناردو داوینچی هم‌عصر بود و تأثیری عمیق بر هنر اروپا گذاشت. میکل‌آنژ در سال ۱۵۶۴ در رم درگذشت، اما میراث او همچنان در قلب هنر جهان زنده است.
+      </p>
+    </div>
+  </div>
+  <footer>
+    طراحی شده با الهام از رنگ‌های کلاسیک رنسانس
+  </footer>
+</body>
+</html>
