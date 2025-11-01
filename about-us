@@ -246,7 +246,7 @@ mini-gallery img:hover{ transform: translateY(-6px) scale(1.02); opacity:0.98;}
     </section>
 
     <footer>
-      © تمام حقوق متعلق به گالری شیک است.
+      © تمام حقوق متعلق به گالری است.
     </footer>
   </div>
 </body>
