@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بلاگ‌ها | گالری هنری رنسانس</title>
+  <style>
+    :root {
+      --brown: #8B552E;
+      --golden: #D6A35A;
+      --beige: #EBD7B2;
+      --mint: #B7C6AF;
+      --teal: #62857D;
+    }
+
+    body {
+      font-family: "Vazirmatn", sans-serif;
+      background-color: var(--beige);
+      color: #2d2d2d;
+      margin: 0;
+      line-height: 1.8;
+    }
+
+    header {
+      background-color: var(--brown);
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1.5rem;
+      background-color: var(--mint);
+    }
+
+    .card h3 {
+      color: var(--brown);
+      margin-top: 0;
+    }
+
+    .card p {
+      font-size: 1rem;
+      text-align: justify;
+      color: #333;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: var(--golden);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .card a:hover {
+      background-color: var(--brown);
+    }
+
+    footer {
+      background-color: var(--golden);
+      text-align: center;
+      padding: 1rem;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>بلاگ هنری رنسانس</header>
+
+  <div class="container">
+    <div class="blog-grid">
+
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Michelangelo%27s_David_-_right_view_1.jpg" alt="داوود میکل‌آنژ">
+        <div class="card-content">
+          <h3>میکل‌آنژ؛ پیکرتراش نابغه</h3>
+          <p>نگاهی به زندگی، هنر و آثار جاودانهٔ میکل‌آنژ، یکی از بزرگ‌ترین هنرمندان تاریخ بشر.</p>
+          <a href="michelangelo.html">مطالعه بیشتر</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Mona_Lisa.jpg" alt="مونالیزا">
+        <div class="card-content">
+          <h3>راز لبخند مونالیزا</h3>
+          <p>بررسی دقیق شاهکار لئوناردو داوینچی و رموز پشت لبخند مرموز مونالیزا.</p>
+          <a href="monalisa.html">مطالعه بیشتر</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/The_School_of_Athens_-_Raphael.jpg" alt="مکتب آتن">
+        <div class="card-content">
+          <h3>مکتب آتن؛ فلسفه در بوم نقاشی</h3>
+          <p>اثر برجستهٔ رافائل که اندیشه و هنر دوران رنسانس را در قالب تصویری ماندگار به نمایش می‌گذارد.</p>
+          <a href="school-of-athens.html">مطالعه بیشتر</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Birth_of_Venus_Botticelli.jpg" alt="تولد ونوس">
+        <div class="card-content">
+          <h3>تولد ونوس؛ زیبایی در نگاه بوتیچلی</h3>
+          <p>نگاهی شاعرانه به نمادگرایی، رنگ و زیبایی در اثر جاودانهٔ بوتیچلی.</p>
+          <a href="birth-of-venus.html">مطالعه بیشتر</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    طراحی شده با الهام از رنگ‌های کلاسیک رنسانس — گالری هنری رنسانس © ۲۰۲۵
+  </footer>
+</body>
+</html>
