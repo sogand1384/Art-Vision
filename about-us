@@ -112,12 +112,12 @@
       <h3>تیم ما</h3>
       <div class="team">
         <div class="member">
-          <img src="a.png" alt="مدیر گالری">
+          <img src="img/a.png" alt="مدیر گالری">
           <h4>سوگند قاسمیان</h4>
           <p>مدیر گالری و کیوریتور آثار</p>
         </div>
         <div class="member">
-          <img src="a.png" alt="طراح وب">
+          <img src="img/a.png" alt="طراح وب">
           <h4>مدینا نکو</h4>
           <p>طراح وب و مسئول تجربه کاربری</p>
         </div>
