@@ -1,99 +1,97 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>میکل‌آنژ | نابغهٔ رنسانس</title>
-  <style>
-    :root {
-      --brown: #8B552E;
-      --golden: #D6A35A;
-      --beige: #EBD7B2;
-      --mint: #B7C6AF;
-      --teal: #62857D;
-    }
-
-    body {
-      font-family: "Vazirmatn", sans-serif;
-      background-color: var(--beige);
-      color: #2d2d2d;
-      margin: 0;
-      line-height: 1.8;
-    }
-
-    header {
-      background-color: var(--brown);
-      color: #fff;
-      padding: 2rem;
-      text-align: center;
-      font-size: 2rem;
-      letter-spacing: 1px;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 3rem auto;
-      background-color: #fff;
-      border-radius: 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
-
-    .hero {
-      background-color: var(--teal);
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .hero img {
-      max-width: 100%;
-      border-radius: 1rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    .content {
-      padding: 2rem;
-      background-color: var(--mint);
-    }
-
-    h2 {
-      color: var(--brown);
-    }
-
-    p {
-      font-size: 1.1rem;
-      text-align: justify;
-    }
-
-    footer {
-      background-color: var(--golden);
-      text-align: center;
-      padding: 1rem;
-      color: #fff;
-      font-size: 0.9rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>میکل آنژ - Art Vision</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>میکل‌آنژ بواناروتی</header>
-  <div class="container">
-    <div class="hero">
-      <img src="img/m.jpg" alt="Michelangelo portrait">
+    <header class="main-header">
+        <div class="container">
+            <h1>Art Vision</h1>
+            <nav>
+                <a href="#">خانه</a>
+                <a href="#">گالری من</a>
+                <a href="blog.html">بلاگ</a>
+                <a href="#">درباره ما</a>
+                <a href="#">تماس با ما</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light article-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                میکل آنژ
+            </a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="#">بازگشت به بلاگ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <header class="text-center mb-5">
+                    <h1 class="display-5 fw-bold mb-3">آفرینش آدم</h1>
+                    <p class="text-muted">شاهکار میکل آنژ در کلیسای سیستین</p>
+                    <div class="d-flex justify-content-center align-items-center text-muted small">
+                        <span class="me-3">تاریخ انتشار: ۱۵۱۲</span> &nbsp &nbsp &nbsp
+                        <span>دسته‌بندی: نقاشی</span>
+                    </div>
+                </header>
+
+                <div class="mb-5">
+                    <img src="img/m.jpg" class="img-fluid article-img" alt="آفرینش آدم">
+                </div>
+
+                <div class="article-content p-4 p-md-5">
+                    <p class="lead mb-4">
+                        <strong>آفرینش آدم</strong> یکی از مشهورترین نقاشی‌های تاریخ هنر جهان است که توسط میکل آنژ بین سال‌های ۱۵۰۸ تا ۱۵۱۲ خلق شد.
+                    </p>
+
+                    <h3 class="mt-5 mb-3">توصیف اثر</h3>
+                    <p>
+                        این نقاشی بخشی از مجموعه نقاشی‌های سقف کلیسای سیستین در واتیکان است. اثر صحنه‌ای از کتاب مقدس را به تصویر می‌کشد که در آن خداوند زندگی را از طریق لمس انگشت خود به آدم می‌بخشد.
+                    </p>
+
+                    <h3 class="mt-5 mb-3">نمادشناسی</h3>
+                    <p>
+                        فضای خالی بین دو انگشت خدا و آدم، یکی از قدرتمندترین نمادهای تاریخ هنر است. این فاصله کم نشان‌دهنده لحظه انتقال روح و زندگی از خالق به مخلوق است.
+                    </p>
+
+                    <h3 class="mt-5 mb-3">ویژگی‌های هنری</h3>
+                    <ul>
+                        <li>استفاده استادانه از پرسپکتیو</li>
+                        <li>تکنیک فرسکو (نقاشی روی گچ تر)</li>
+                        <li>تمرکز بر آناتومی بدن انسان</li>
+                        <li>ترکیب‌بندی متقارن و متعادل</li>
+                    </ul>
+
+                    <div class="info-box p-4 mt-5 rounded">
+                        <h5 class="mb-3">درباره میکل آنژ</h5>
+                        <p class="mb-0">
+                            میکل آنژ بوناروتی (۱۵۶۴-۱۴۷۵) هنرمند برجسته دوره رنسانس ایتالیا بود که در زمینه‌های مجسمه‌سازی، نقاشی، معماری و شعر فعالیت می‌کرد. او به عنوان یکی از بزرگترین هنرمندان تاریخ شناخته می‌شود.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-outline-secondary">بازگشت به صفحه اصلی بلاگ</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="content">
-      <h2>دربارهٔ میکل‌آنژ</h2>
-      <p>
-        میکل‌آنژ بواناروتی، یکی از بزرگ‌ترین هنرمندان تاریخ بشر، در سال ۱۴۷۵ در کاپره‌زه ایتالیا متولد شد. او مجسمه‌ساز، نقاش، معمار و شاعر بود و آثارش نقطهٔ اوج جنبش رنسانس به‌شمار می‌روند.
-      </p>
-      <p>
-        شاهکارهایی چون «داوود»، «پیتا» و نقاشی‌های خیره‌کنندهٔ سقف کلیسای سیستین از جمله آثاری هستند که مهارت بی‌نظیر او را در ترکیب احساسات انسانی با زیبایی جسمانی به نمایش می‌گذارند. میکل‌آنژ نه‌تنها درک عمیقی از فرم انسانی داشت، بلکه در آثارش روح و فلسفهٔ رنسانس را مجسم کرد.
-      </p>
-      <p>
-        او در طول عمرش با هنرمندان بزرگی چون لئوناردو داوینچی هم‌عصر بود و تأثیری عمیق بر هنر اروپا گذاشت. میکل‌آنژ در سال ۱۵۶۴ در رم درگذشت، اما میراث او همچنان در قلب هنر جهان زنده است.
-      </p>
-    </div>
-  </div>
-  <footer>
-تمامی حقوق متعلق به گالری میباشد.  </footer>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p class="mb-0">© ۲۰۲۳ وبلاگ هنر آرت ویژن. تمام حقوق محفوظ است.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
