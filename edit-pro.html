@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ویرایش پروفایل | گالری هنری</title>
+    <!-- بوت استرپ 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- فونت آیکون -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="bodyEdit">
+ 
+<!-- هدر -->
+<header class="simple-header">
+    <div class="container">
+        <nav class="navbar">
+            
+            <!-- دکمه منوی موبایل -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                ☰
+            </button>
+
+            <!-- منوی وسط -->
+            <div class="header-center">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="archive-art.html" class="nav-link">گالری</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="archive-blog.html" class="nav-link">بلاگ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about-us.html" class="nav-link">درباره ما</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact-us.html" class="nav-link">تماس با ما</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- دکمه‌های سمت چپ -->
+            <div class="header-left">
+                <a href="sinup.html"><button class="auth-btn login-btn">
+                    ورود
+                </button></a>
+                <a href="register.html"><button class="auth-btn signup-btn">
+                    ثبت نام
+                </button></a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+    <!-- صفحه ویرایش پروفایل -->
+    <main class="profile-edit-container">
+        <!-- هدر صفحه -->
+        <div class="page-header">
+            <h1 class="mb-3"><i class="fas fa-user-edit me-3"></i>ویرایش پروفایل هنرمند</h1>
+            <p class="text-white-50 mb-0">اطلاعات شخصی و حرفه‌ای خود را به روز کنید</p>
+        </div>
+
+        <!-- کارت پروفایل -->
+        <div class="profile-card">
+            <!-- هدر پروفایل -->
+            <div class="profile-header">
+                <div class="avatar-upload">
+                    <img src="img/zz.jpg" 
+                         alt="پروفایل" class="profile-avatar" id="profileAvatar">
+                    <div class="avatar-overlay" onclick="document.getElementById('avatarInput').click()">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <input type="file" id="avatarInput" accept="image/*" style="display: none;" onchange="updateAvatar(event)">
+                </div>
+                <h2 class="text-white mb-2" id="profileName">سارا احمدی</h2>
+                <p class="text-white-50 mb-0" id="profileTitle">هنرمند نقاش حرفه‌ای</p>
+            </div>
+
+            <!-- تب‌ها -->
+            <div class="profile-tabs">
+                <ul class="nav nav-tabs nav-tabs-custom" id="profileTabs">
+                    <li class="nav-item">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#personal">
+                            <i class="fas fa-user me-2"></i>اطلاعات شخصی
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#professional">
+                            <i class="fas fa-briefcase me-2"></i>اطلاعات حرفه‌ای
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#portfolio">
+                            <i class="fas fa-images me-2"></i>نمونه کارها
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#social">
+                            <i class="fas fa-share-alt me-2"></i>شبکه‌های اجتماعی
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- محتوای تب‌ها -->
+            <div class="tab-content" id="profileTabContent">
+                <!-- تب ۱: اطلاعات شخصی -->
+                <div class="tab-pane fade show active" id="personal">
+                    <form id="personalForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <label class="form-label-custom">نام *</label>
+                                <input type="text" class="form-control form-control-custom" value="سارا" required>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label class="form-label-custom">نام خانوادگی *</label>
+                                <input type="text" class="form-control form-control-custom" value="احمدی" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <label class="form-label-custom">ایمیل *</label>
+                                <input type="email" class="form-control form-control-custom" value="sara.ahmadi@example.com" required>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label class="form-label-custom">شماره تماس</label>
+                                <input type="tel" class="form-control form-control-custom" value="۰۹۱۲۳۴۵۶۷۸۹">
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label-custom">آدرس</label>
+                            <textarea class="form-control form-control-custom" rows="2">تهران، خیابان ولیعصر، پلاک ۱۲۳</textarea>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <label class="form-label-custom">تاریخ تولد</label>
+                                <input type="date" class="form-control form-control-custom" value="1990-05-15">
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label class="form-label-custom">جنسیت</label>
+                                <select class="form-control form-control-custom">
+                                    <option value="female" selected>زن</option>
+                                    <option value="male">مرد</option>
+                                    <option value="other">سایر</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="submit" class="btn-save">
+                                <i class="fas fa-save me-2"></i>ذخیره تغییرات
+                            </button>
+                            <button type="button" class="btn-cancel" onclick="resetForm('personalForm')">
+                                <i class="fas fa-redo me-2"></i>بازنشانی
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- تب ۲: اطلاعات حرفه‌ای -->
+                <div class="tab-pane fade" id="professional">
+                    <form id="professionalForm">
+                        <div class="mb-4">
+                            <label class="form-label-custom">عنوان شغلی *</label>
+                            <input type="text" class="form-control form-control-custom" value="هنرمند نقاش حرفه‌ای" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label-custom">بیوگرافی *</label>
+                            <textarea class="form-control form-control-custom" rows="4" id="bioText" oninput="updateBioCounter()">
+نقاش معاصر با ۱۲ سال تجربه در حوزه هنرهای تجسمی. فارغ‌التحصیل رشته نقاشی از دانشگاه تهران. دارای ۱۵ نمایشگاه انفرادی و بیش از ۳۰ نمایشگاه گروهی در داخل و خارج از کشور. تخصص اصلی در هنر آبستره و مینیمال با تأثیر از طبیعت و فلسفه شرقی.
+                            </textarea>
+                            <div class="bio-counter">
+                                <span id="bioCounter">۲۸۰</span> کاراکتر از ۵۰۰
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label-custom">مهارت‌ها و تخصص‌ها</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control form-control-custom" id="skillInput" placeholder="مهارت جدید">
+                                <button class="btn btn-outline-light" type="button" onclick="addSkill()">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div id="skillsContainer" class="skills-container">
+                                <!-- مهارت‌ها اینجا اضافه می‌شوند -->
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <label class="form-label-custom">سال شروع فعالیت</label>
+                                <input type="number" class="form-control form-control-custom" value="2010" min="1950" max="2024">
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label class="form-label-custom">مدرک تحصیلی</label>
+                                <select class="form-control form-control-custom">
+                                    <option value="diploma">دیپلم</option>
+                                    <option value="associate">کاردانی</option>
+                                    <option value="bachelor" selected>کارشناسی</option>
+                                    <option value="master">کارشناسی ارشد</option>
+                                    <option value="phd">دکتری</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="submit" class="btn-save">
+                                <i class="fas fa-save me-2"></i>ذخیره تغییرات
+                            </button>
+                            <button type="button" class="btn-cancel" onclick="resetForm('professionalForm')">
+                                <i class="fas fa-redo me-2"></i>بازنشانی
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- تب ۳: نمونه کارها -->
+                <div class="tab-pane fade" id="portfolio">
+                    <div class="mb-4">
+                        <h3 class="section-title"><i class="fas fa-images me-2"></i>نمونه کارها</h3>
+                        <p class="text-white-50 mb-4">بهترین آثار خود را برای نمایش در پروفایل آپلود کنید</p>
+                    </div>
+
+                    <div class="portfolio-upload mb-4" onclick="document.getElementById('portfolioInput').click()">
+                        <i class="fas fa-cloud-upload-alt fa-3x mb-3" style="color: rgba(255, 225, 168, 0.5);"></i>
+                        <h4 class="text-white mb-2">آپلود نمونه کار جدید</h4>
+                        <p class="text-white-50 mb-0">برای انتخاب فایل کلیک کنید</p>
+                        <input type="file" id="portfolioInput" accept="image/*" style="display: none;" onchange="addPortfolioItem(event)">
+                    </div>
+
+                    <div class="row" id="portfolioItems">
+                        <!-- نمونه کارها اینجا اضافه می‌شوند -->
+                        <div class="col-md-4 mb-4">
+                            <div class="artwork-item">
+                                <img src="img/ll.jpg" 
+                                     class="img-fluid rounded" alt="نمونه کار">
+                                <div class="d-flex justify-content-between mt-2">
+                                    <button class="btn btn-sm btn-outline-light">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger" onclick="removePortfolioItem(this)">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="button" class="btn-save" onclick="savePortfolio()">
+                            <i class="fas fa-save me-2"></i>ذخیره نمونه کارها
+                        </button>
+                    </div>
+                </div>
+
+                <!-- تب ۴: شبکه‌های اجتماعی -->
+                <div class="tab-pane fade" id="social">
+                    <form id="socialForm">
+                        <div class="mb-4">
+                            <label class="form-label-custom">لینک وبسایت شخصی</label>
+                            <div class="social-input-group">
+                                <i class="fas fa-globe"></i>
+                                <input type="url" class="form-control form-control-custom" placeholder="https://" value="https://saraahmadi.art">
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label-custom">اینستاگرام</label>
+                            <div class="social-input-group">
+                                <i class="fab fa-instagram"></i>
+                                <input type="text" class="form-control form-control-custom" placeholder="نام کاربری" value="sara.ahmadi.art">
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label-custom">توییتر</label>
+                            <div class="social-input-group">
+                                <i class="fab fa-twitter"></i>
+                                <input type="text" class="form-control form-control-custom" placeholder="نام کاربری" value="sara_ahmadi_art">
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label-custom">فیسبوک</label>
+                            <div class="social-input-group">
+                                <i class="fab fa-facebook"></i>
+                                <input type="text" class="form-control form-control-custom" placeholder="لینک پروفایل" value="https://facebook.com/sara.ahmadi.art">
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label-custom">لینکدین</label>
+                            <div class="social-input-group">
+                                <i class="fab fa-linkedin"></i>
+                                <input type="text" class="form-control form-control-custom" placeholder="لینک پروفایل" value="https://linkedin.com/in/saraahmadi">
+                            </div>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="submit" class="btn-save">
+                                <i class="fas fa-save me-2"></i>ذخیره لینک‌ها
+                            </button>
+                            <button type="button" class="btn-cancel" onclick="resetForm('socialForm')">
+                                <i class="fas fa-redo me-2"></i>بازنشانی
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+        
+    </main>
+
+
+
+<footer class="beautiful-footer">
+    
+    <div class="container">
+
+        <div class="footer-main">
+            <!-- ستون ۱: درباره ما -->
+            <div class="footer-column">
+                <h3 class="footer-title">
+                    <span class="footer-icon">🎨</span>
+                    Art Vision
+                </h3>
+                <p class="footer-description">
+                    پلتفرم هنری برای نمایش آثار هنرمندان ایرانی و بین‌المللی. 
+                    جایی که هنر دیجیتال زنده می‌شود و ایده‌ها شکل می‌گیرند.
+                </p>
+
+            </div>
+            
+            <!-- ستون ۲: لینک‌های سریع -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">لینک‌های سریع</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">صفحه اصلی</a></li>
+                    <li><a href="archive-art.html" class="footer-link">گالری آثار</a></li>
+                    <li><a href="archive-blog.html" class="footer-link"> بلاگ ها</a></li>
+                </ul>
+            </div>
+            
+            <!-- ستون ۳: اطلاعات مهم -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">اطلاعات مهم</h4>
+                <ul class="footer-links">
+                    <li><a href="rules.html" class="footer-link">مقررات و قوانین</a></li>
+                    <li><a href="faq.html" class="footer-link">سوالات متداول</a></li>
+                    <li><a href="contact-us.html" class="footer-link"> تماس با ما</a></li>
+                    <li><a href="about-us.html" class="footer-link"> درباره ما</a></li>
+                </ul>
+            </div>
+            
+            <!-- ستون ۴: خبرنامه -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">عضویت در خبرنامه</h4>
+                <p class="newsletter-text">
+                    از جدیدترین آثار و نمایشگاه‌ها مطلع شوید
+                </p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="ایمیل خود را وارد کنید" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-btn">
+                        <span class="btn-icon"></span>
+                        عضویت
+                    </button>
+                </form>
+         
+            </div>
+        </div>
+       
+        
+        <!-- کپی رایت -->
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>© 2025 Art Vision. تمامی حقوق محفوظ است.</p>
+                <p class="made-with">
+                    ساخته شده با <span class="heart">❤️</span> برای جامعه هنری
+                </p>
+            </div>
+            <div class="footer-badges">
+                <span class="badge">هنر دیجیتال</span>
+                <span class="badge">تایید شده</span>
+                <span class="badge">امن</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سوالات متداول (FAQ)</title>
+    <!-- بوت استرپ 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+<!-- هدر -->
+<header class="simple-header">
+    <div class="container">
+        <nav class="navbar">
+            
+            <!-- دکمه منوی موبایل -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                ☰
+            </button>
+
+            <!-- منوی وسط -->
+            <div class="header-center">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="archive-art.html" class="nav-link">گالری</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="archive-blog.html" class="nav-link">بلاگ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about-us.html" class="nav-link">درباره ما</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact-us.html" class="nav-link">تماس با ما</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- دکمه‌های سمت چپ -->
+            <div class="header-left">
+                <a href="sinup.html"><button class="auth-btn login-btn">
+                    ورود
+                </button></a>
+                <a href="register.html"><button class="auth-btn signup-btn">
+                    ثبت نام
+                </button></a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+    <!-- بخش هیرو -->
+    <section class="faq-hero">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="hero-title">سوالات متداول</h1>
+                    <p class="hero-subtitle">
+                        پاسخ سوالات پرتکرار خود را در این بخش بیابید. اگر پاسخ سوال خود را نیافتید، 
+                        می‌توانید از طریق فرم تماس با ما سوال خود را بپرسید.
+                    </p>
+                    
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="جستجوی سوالات...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+            <!-- سوالات متداول -->
+            <div id="faq-container">
+                <!-- دسته عمومی -->
+                <div class="category-section" id="general">
+                    <h3 class="cream-color mb-4" style="color: #ffe1a8; font-size: 1.8rem; margin-top: 40px;">
+                        <i class="fas fa-globe me-2"></i>
+                        سوالات عمومی
+                        <span class="badge bg-warning text-dark ms-2">۱۲ سوال</span>
+                    </h3>
+                    
+                    <div class="faq-card active" data-category="general">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>
+                                
+                                سایت شما چه خدماتی ارائه می‌دهد؟
+                            </span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                ما خدمات متنوعی از جمله طراحی وب‌سایت، توسعه نرم‌افزارهای سفارشی، 
+                                مشاوره فناوری اطلاعات، سئو و بهینه‌سازی سایت، پشتیبانی و نگهداری 
+                                و آموزش‌های تخصصی ارائه می‌دهیم.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-card" data-category="general">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>
+                               
+                                چطور می‌توانم با پشتیبانی تماس بگیرم؟
+                            </span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                شما می‌توانید از طریق سه روش با پشتیبانی ما در ارتباط باشید:<br>
+                                ۱. تماس تلفنی با شماره ۰۲۱-۱۲۳۴۵۶۷۸<br>
+                                ۲. ارسال تیکت از طریق پنل کاربری<br>
+                                ۳. ارسال ایمیل به support@yoursite.com<br>
+                                تیم پشتیبانی ما به صورت ۲۴/۷ پاسخگوی شماست.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-card" data-category="general">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>
+                               
+                                آیا امکان بازدید از دفتر مرکزی وجود دارد؟
+                            </span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                بله، با هماهنگی قبلی از طریق تلفن یا ایمیل، می‌توانید برای بازدید از دفتر مرکزی ما اقدام نمایید. 
+                                لطفاً حداقل ۴۸ ساعت قبل از بازدید هماهنگی لازم را انجام دهید.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- دسته فنی -->
+                <div class="category-section" id="technical">
+                    <h3 class="cream-color mb-4" style="color: #ffe1a8; font-size: 1.8rem; margin-top: 40px;">
+                        <i class="fas fa-cogs me-2"></i>
+                        مسائل فنی
+                        <span class="badge bg-warning text-dark ms-2">۱۰ سوال</span>
+                    </h3>
+                    
+                    <div class="faq-card" data-category="technical">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>
+                                
+                                برای استفاده از خدمات، چه مرورگری توصیه می‌کنید؟
+                            </span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                ما آخرین نسخه‌های مرورگرهای Chrome, Firefox, Safari و Edge را توصیه می‌کنیم. 
+                                حتماً JavaScript را در مرورگر خود فعال کرده و از آپدیت بودن مرورگر اطمینان حاصل کنید.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-card" data-category="technical">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>
+                                
+                                سرعت بارگذاری سایت کند است، چکار کنم؟
+                            </span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                ابتدا اتصال اینترنت خود را بررسی کنید. سپس کش مرورگر را پاک کنید (Ctrl+Shift+Delete). 
+                                اگر مشکل ادامه داشت، با پشتیبانی فنی تماس بگیرید.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- دسته امنیت -->
+                <div class="category-section" id="security">
+                    <h3 class="cream-color mb-4" style="color: #ffe1a8; font-size: 1.8rem; margin-top: 40px;">
+                        <i class="fas fa-shield-alt me-2"></i>
+                        امنیت و حریم خصوصی
+                        <span class="badge bg-warning text-dark ms-2">۶ سوال</span>
+                    </h3>
+                    
+                    <div class="faq-card" data-category="security">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>
+                            
+                                اطلاعات من چگونه محافظت می‌شوند؟
+                            </span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                ما از رمزنگاری SSL، فایروال پیشرفته، سیستم‌های تشخیص نفوذ و ذخیره‌سازی امن داده‌ها استفاده می‌کنیم. 
+                                اطلاعات شما مطابق با قوانین حفاظت از داده‌ها محافظت می‌شود.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+ 
+<footer class="beautiful-footer">
+    
+    <div class="container">
+
+        <div class="footer-main">
+            <!-- ستون ۱: درباره ما -->
+            <div class="footer-column">
+                <h3 class="footer-title">
+                    <span class="footer-icon">🎨</span>
+                    Art Vision
+                </h3>
+                <p class="footer-description">
+                    پلتفرم هنری برای نمایش آثار هنرمندان ایرانی و بین‌المللی. 
+                    جایی که هنر دیجیتال زنده می‌شود و ایده‌ها شکل می‌گیرند.
+                </p>
+
+            </div>
+            
+            <!-- ستون ۲: لینک‌های سریع -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">لینک‌های سریع</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">صفحه اصلی</a></li>
+                    <li><a href="archive-art.html" class="footer-link">گالری آثار</a></li>
+                    <li><a href="archive-blog.html" class="footer-link"> بلاگ ها</a></li>
+                </ul>
+            </div>
+            
+            <!-- ستون ۳: اطلاعات مهم -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">اطلاعات مهم</h4>
+                <ul class="footer-links">
+                    <li><a href="rules.html" class="footer-link">مقررات و قوانین</a></li>
+                    <li><a href="faq.html" class="footer-link">سوالات متداول</a></li>
+                    <li><a href="contact-us.html" class="footer-link"> تماس با ما</a></li>
+                    <li><a href="about-us.html" class="footer-link"> درباره ما</a></li>
+                </ul>
+            </div>
+            
+            <!-- ستون ۴: خبرنامه -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">عضویت در خبرنامه</h4>
+                <p class="newsletter-text">
+                    از جدیدترین آثار و نمایشگاه‌ها مطلع شوید
+                </p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="ایمیل خود را وارد کنید" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-btn">
+                        <span class="btn-icon"></span>
+                        عضویت
+                    </button>
+                </form>
+         
+            </div>
+        </div>
+       
+        
+        <!-- کپی رایت -->
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>© 2025 Art Vision. تمامی حقوق محفوظ است.</p>
+                <p class="made-with">
+                    ساخته شده با <span class="heart">❤️</span> برای جامعه هنری
+                </p>
+            </div>
+            <div class="footer-badges">
+                <span class="badge">هنر دیجیتال</span>
+                <span class="badge">تایید شده</span>
+                <span class="badge">امن</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- اسکریپت بوت استرپ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

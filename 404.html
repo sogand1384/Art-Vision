@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه مورد نظر یافت نشد | 404</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body404 body4041">
+    <!-- افکت زمینه خفن -->
+    <div class="bg-effects">
+        <div class="gradient-circle-1"></div>
+        <div class="gradient-circle-2"></div>
+        <div class="gradient-circle-3"></div>
+    </div>
+
+   
+
+    <!-- محتوای اصلی -->
+    <main>
+        <div class="error-number">404</div>
+        <h1 class="error-title">صفحه مورد نظر یافت نشد!</h1>
+        
+        <div class="separator"></div>
+        
+        <p class="error-message">
+            متأسفانه صفحه‌ای که به دنبال آن هستید وجود ندارد، 
+            منتقل شده یا به طور موقت در دسترس نیست.
+            <br>
+            می‌توانید با کلیک بر روی دکمه زیر به صفحه اصلی بازگردید.
+        </p>
+        
+        <a href="index.html" class="back-btn">
+            بازگشت به صفحه اصلی
+        </a>
+    </main>
+
+    <!-- اسکریپت ساده -->
+    <script>
+        // انیمیشن ملایم برای دکمه
+        document.querySelector('.back-btn').addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px)';
+        });
+        
+        document.querySelector('.back-btn').addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    </script>
+</body>
+</html>

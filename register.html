@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت نام</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="sib bodySi">
+    <!-- افکت زمینه -->
+    <div class="artgal-bg-effect">
+        <div class="artgal-bg-circle artgal-circle-1"></div>
+        <div class="artgal-bg-circle artgal-circle-2"></div>
+    </div>
+
+    <!-- کارت ثبت نام -->
+    <div class="artgal-register-card">
+        <div class="artgal-card-header">
+            <h2 class="artgal-card-title">ایجاد حساب کاربری جدید</h2>
+        </div>
+
+        <!-- پیام موفقیت -->
+        <div class="artgal-success-message" id="artgalSuccessMessage">
+            ثبت نام با موفقیت انجام شد
+        </div>
+
+        <!-- فرم ثبت نام -->
+        <form id="artgalRegisterForm">
+            <div class="artgal-form-group">
+                <label class="artgal-form-label">نام کامل</label>
+                <input type="text" class="artgal-form-control" placeholder="نام و نام خانوادگی" required>
+            </div>
+
+            <div class="artgal-form-group">
+                <label class="artgal-form-label">آدرس ایمیل</label>
+                <input type="email" class="artgal-form-control" placeholder="example@email.com" required>
+            </div>
+
+            <div class="artgal-form-group">
+                <label class="artgal-form-label">نام کاربری</label>
+                <input type="text" class="artgal-form-control" placeholder="username" required>
+            </div>
+
+            <div class="artgal-form-group">
+                <label class="artgal-form-label">کلمه عبور</label>
+                <input type="password" class="artgal-form-control" placeholder="حداقل ۶ کاراکتر" 
+                       minlength="6" required id="artgalPassword">
+                <div class="artgal-password-strength">
+                    <div class="artgal-strength-bar" id="artgalPasswordStrength"></div>
+                </div>
+            </div>
+
+            <div class="artgal-form-group">
+                <label class="artgal-form-label">تکرار کلمه عبور</label>
+                <input type="password" class="artgal-form-control" placeholder="تکرار رمز عبور" required>
+            </div>
+
+            <div class="artgal-terms">
+                <input type="checkbox" id="artgalTerms" class="artgal-terms-checkbox" required>
+                <label for="artgalTerms" class="artgal-terms-label">
+                    با 
+                    <a href="terms.html" class="artgal-terms-link">قوانین و مقررات</a>
+                    و 
+                    <a href="privacy.html" class="artgal-terms-link">حریم خصوصی</a>
+                    سایت موافقت می‌کنم
+                </label>
+            </div>
+
+            <button type="submit" class="artgal-submit-btn">ثبت نام و ایجاد حساب</button>
+        </form>
+
+        <div class="artgal-form-links">
+            <a href="sinup.html" class="artgal-form-link">قبلاً ثبت نام کرده‌اید؟ ورود به حساب</a>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

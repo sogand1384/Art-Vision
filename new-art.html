@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>افزودن اثر جدید | گالری هنری</title>
+    <!-- بوت استرپ 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- فونت آیکون -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bodyNe">
+ <!-- هدر -->
+<header class="simple-header">
+    <div class="container">
+        <nav class="navbar">
+
+            
+            <!-- دکمه منوی موبایل -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                ☰
+            </button>
+            <!-- منوی وسط -->
+            <div class="header-center">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="archive-art.html" class="nav-link">گالری</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="archive-blog.html" class="nav-link">بلاگ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about-us.html" class="nav-link">درباره ما</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact-us.html" class="nav-link">تماس با ما</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- دکمه‌های سمت چپ -->
+            <div class="header-left">
+                <a href="sinup.html"><button class="auth-btn login-btn">
+                    ورود
+                </button></a>
+                <a href="register.html"><button class="auth-btn signup-btn">
+                    ثبت نام
+                </button></a>
+            </div>
+
+        </nav>
+    </div>
+</header>
+
+
+    <!-- صفحه افزودن اثر -->
+    <main class="add-art-container">
+        <!-- هدر صفحه -->
+        <div class="page-header">
+            <h1 class="mb-3"><i class="fas fa-plus-circle me-3"></i>افزودن اثر هنری جدید</h1>
+            <p class="text-white-50 mb-0">اطلاعات اثر هنری خود را با دقت وارد کنید</p>
+        </div>
+
+        <!-- فرم افزودن اثر -->
+        <div class="art-form-card">
+            <form id="addArtForm">
+                <!-- بخش ۱: اطلاعات اصلی -->
+                <div class="form-section">
+                    <h3 class="section-title"><i class="fas fa-info-circle me-2"></i>اطلاعات اصلی اثر</h3>
+                    
+                    <div class="row">
+                        <div class="col-md-8 mb-4">
+                            <label class="form-label-custom">عنوان اثر *</label>
+                            <input type="text" class="form-control form-control-custom" placeholder="عنوان اثر خود را وارد کنید" required>
+                        </div>
+                        
+                        <div class="col-md-4 mb-4">
+                            <label class="form-label-custom">دسته‌بندی *</label>
+                            <select class="form-control form-control-custom" required>
+                                <option value="" class="opt">انتخاب دسته‌بندی</option>
+                                <option value="painting" class="opt">نقاشی</option>
+                                <option value="sculpture" class="opt">مجسمه</option>
+                                <option value="photography" class="opt">عکاسی</option>
+                                <option value="digital" class="opt">هنر دیجیتال</option>
+                                <option value="calligraphy" class="opt">خوشنویسی</option>
+                                <option value="other" class="opt">سایر</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="form-label-custom">توضیحات اثر *</label>
+                        <textarea class="form-control form-control-custom" rows="4" placeholder="در مورد اثر خود توضیح دهید" required></textarea>
+                        <div class="form-text text-white-50 mt-2">حداقل ۱۰۰ کاراکتر توصیه می‌شود</div>
+                    </div>
+                </div>
+
+                <!-- بخش ۲: آپلود تصویر -->
+                <div class="form-section">
+                    <h3 class="section-title"><i class="fas fa-image me-2"></i>تصویر اثر</h3>
+                    
+                    <div id="uploadArea" class="upload-area">
+                        <div class="upload-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <h4 class="text-white mb-3">تصویر اثر را اینجا رها کنید</h4>
+                        <p class="text-white-50 mb-4">یا برای انتخاب فایل کلیک کنید</p>
+                        <button type="button" class="btn btn-outline-light" onclick="document.getElementById('imageInput').click()">
+                            <i class="fas fa-folder-open me-2"></i>انتخاب فایل
+                        </button>
+                        <p class="text-white-50 mt-3 mb-0">فرمت‌های مجاز: JPG, PNG, GIF - حداکثر حجم: ۵MB</p>
+                    </div>
+                    
+                    <input type="file" id="imageInput" accept="image/*" style="display: none;" onchange="previewImage(event)">
+                    
+                    <div id="previewContainer" class="preview-container">
+                        <img id="previewImage" class="preview-image" src="" alt="پیش‌نمایش">
+                        <button type="button" class="btn btn-sm btn-danger mt-3" onclick="removeImage()">
+                            <i class="fas fa-trash me-2"></i>حذف تصویر
+                        </button>
+                    </div>
+                </div>
+
+                <!-- بخش ۳: مشخصات فنی -->
+                <div class="form-section">
+                    <h3 class="section-title"><i class="fas fa-ruler-combined me-2"></i>مشخصات فنی</h3>
+                    
+                    <div class="row dimensions-row">
+                        <div class="col-md-4 mb-4">
+                            <label class="form-label-custom">طول (سانتیمتر)</label>
+                            <div class="position-relative">
+                                <input type="number" class="form-control form-control-custom" placeholder="0" min="0" step="0.1">
+                                <span>cm</span>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 mb-4">
+                            <label class="form-label-custom">عرض (سانتیمتر)</label>
+                            <div class="position-relative">
+                                <input type="number" class="form-control form-control-custom" placeholder="0" min="0" step="0.1">
+                                <span>cm</span>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 mb-4">
+                            <label class="form-label-custom">ارتفاع (سانتیمتر)</label>
+                            <div class="position-relative">
+                                <input type="number" class="form-control form-control-custom" placeholder="0" min="0" step="0.1">
+                                <span>cm</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <label class="form-label-custom">تکنیک اجرا</label>
+                            <select class="form-control form-control-custom">
+                                <option value="" class="opt">انتخاب تکنیک</option>
+                                <option value="oil" class="opt">رنگ روغن</option>
+                                <option value="acrylic" class="opt">آکریلیک</option>
+                                <option value="watercolor" class="opt">آبرنگ</option>
+                                <option value="pastel" class="opt">پاستل</option>
+                                <option value="mixed" class="opt">تکنیک ترکیبی</option>
+                                <option value="other" class="opt">سایر</option>
+                            </select>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <label class="form-label-custom">سال خلق اثر</label>
+                            <input type="number" class="form-control form-control-custom" placeholder="۱۴۰۲" min="1300" max="1500">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="form-label-custom">مواد به کار رفته</label>
+                        <textarea class="form-control form-control-custom" rows="2" placeholder="مواد و متریال استفاده شده در اثر"></textarea>
+                    </div>
+                </div>
+
+                <!-- بخش ۴: قیمت‌گذاری و فروش -->
+                <div class="form-section">
+                    <h3 class="section-title"><i class="fas fa-tag me-2"></i>قیمت‌گذاری و فروش</h3>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <label class="form-label-custom">قیمت (تومان) *</label>
+                            <div class="price-input-group">
+                                <input type="number" class="form-control form-control-custom" placeholder="قیمت اثر" required min="0">
+                                <span>تومان</span>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <label class="form-label-custom">وضعیت فروش *</label>
+                            <select class="form-control form-control-custom" required>
+                                <option value="available" class="opt">برای فروش</option>
+                                <option value="sold" class="opt">فروخته شده</option>
+                                <option value="reserved" class="opt">رزرو شده</option>
+                                <option value="not_for_sale" class="opt">برای فروش نیست</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input form-check-input-custom" type="checkbox" id="negotiableSwitch">
+                            <label class="form-check-label text-white-50" for="negotiableSwitch">
+                                قیمت قابل مذاکره است
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input form-check-input-custom" type="checkbox" id="originalSwitch" checked>
+                            <label class="form-check-label text-white-50" for="originalSwitch">
+                                اثر اصلی است (کپی نیست)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+  
+                <!-- دکمه‌های فرم -->
+                <div class="form-buttons">
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-save me-2"></i>ذخیره و انتشار اثر
+                    </button>
+                    <button type="button" class="btn-cancel" onclick="window.history.back()">
+                        <i class="fas fa-times me-2"></i>انصراف
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+<footer class="beautiful-footer">
+    
+    <div class="container">
+
+        <div class="footer-main">
+            <!-- ستون ۱: درباره ما -->
+            <div class="footer-column">
+                <h3 class="footer-title">
+                    <span class="footer-icon">🎨</span>
+                    Art Vision
+                </h3>
+                <p class="footer-description">
+                    پلتفرم هنری برای نمایش آثار هنرمندان ایرانی و بین‌المللی. 
+                    جایی که هنر دیجیتال زنده می‌شود و ایده‌ها شکل می‌گیرند.
+                </p>
+
+            </div>
+            
+            <!-- ستون ۲: لینک‌های سریع -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">لینک‌های سریع</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">صفحه اصلی</a></li>
+                    <li><a href="archive-art.html" class="footer-link">گالری آثار</a></li>
+                    <li><a href="archive-blog.html" class="footer-link"> بلاگ ها</a></li>
+                </ul>
+            </div>
+            
+            <!-- ستون ۳: اطلاعات مهم -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">اطلاعات مهم</h4>
+                <ul class="footer-links">
+                    <li><a href="rules.html" class="footer-link">مقررات و قوانین</a></li>
+                    <li><a href="faq.html" class="footer-link">سوالات متداول</a></li>
+                    <li><a href="contact-us.html" class="footer-link"> تماس با ما</a></li>
+                    <li><a href="about-us.html" class="footer-link"> درباره ما</a></li>
+                </ul>
+            </div>
+            
+            <!-- ستون ۴: خبرنامه -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">عضویت در خبرنامه</h4>
+                <p class="newsletter-text">
+                    از جدیدترین آثار و نمایشگاه‌ها مطلع شوید
+                </p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="ایمیل خود را وارد کنید" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-btn">
+                        <span class="btn-icon"></span>
+                        عضویت
+                    </button>
+                </form>
+         
+            </div>
+        </div>
+       
+        
+        <!-- کپی رایت -->
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>© 2025 Art Vision. تمامی حقوق محفوظ است.</p>
+                <p class="made-with">
+                    ساخته شده با <span class="heart">❤️</span> برای جامعه هنری
+                </p>
+            </div>
+            <div class="footer-badges">
+                <span class="badge">هنر دیجیتال</span>
+                <span class="badge">تایید شده</span>
+                <span class="badge">امن</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

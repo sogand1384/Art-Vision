@@ -1,65 +1,346 @@
-<!doctype html>
-<html lang="fa">
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>درباره گالری — درباره ما</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره ما</title>
+    <!-- بوت استرپ 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- فونت آیکون -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+    <style>
+
+    </style>
 </head>
 <body>
-  <div class="site-wrap">
+ <!-- هدر -->
+<header class="simple-header">
+    <div class="container">
+        <nav class="navbar">
 
-    <nav class="navbar">
-      <a href="index.html">خانه</a>
-      <a href="about-us.html" class="active">درباره ما</a>
-      <a href="archive-product.html">آرشیو آثار</a>
-      <a href="archive-blog.html">بلاگ</a>
-      <a href="#">تماس با ما</a>
-    </nav>
+            
+            <!-- دکمه منوی موبایل -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                ☰
+            </button>
+            <!-- منوی وسط -->
+            <div class="header-center">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="archive-art.html" class="nav-link">گالری</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="archive-blog.html" class="nav-link">بلاگ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about-us.html" class="nav-link active">درباره ما</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact-us.html" class="nav-link">تماس با ما</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- دکمه‌های سمت چپ -->
+            <div class="header-left">
+                <a href="sinup.html"><button class="auth-btn login-btn">
+                    ورود
+                </button></a>
+                <a href="register.html"><button class="auth-btn signup-btn">
+                    ثبت نام
+                </button></a>
+            </div>
 
-    <h1 class="page-title">درباره گالری ما</h1>
-
-    <div class="intro">
-      <div class="row align-items-center">
-        <div class="col-md-7">
-          <div class="text">
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک. این گالری تلاش می‌کند تا با انتخاب آثار منتخب، تجربه‌ای بدیع از زیبایی را پیش چشم مخاطب قرار دهد. مجموعه‌ای از هنرمندان معاصر و قدیمی در کنار هم آثارشان را به نمایش می‌گذارند.
-            <br><br>
-            مأموریت ما ایجاد فضایی است که هنرمند و مخاطب هر دو احساس تعلق کنند؛ جایی برای گفتگو، نقد و لذت بردن از هنر.
-          </div>
-        </div>
-        <div class="col-md-5">
-          <img src="img/l.jpg" alt="گالری" />
-        </div>
-      </div>
+        </nav>
     </div>
+</header>
 
-    <section style="margin-top:26px;">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card">
-            <h3 style="color:var(--gold);">ماموریت</h3>
-            <p style="margin-top:8px; color:var(--muted)">حمایت از هنرمندان نوظهور و نمایش آثار معاصر با استانداردهای بین‌المللی.</p>
-          </div>
+    <!-- بخش هیرو -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title">داستان ما آغاز یک تحول بود</h1>
+                    <p class="hero-subtitle">
+                        ما در سال ۱۳۹۵ با یک ایده ساده شروع کردیم: ایجاد تجربه‌ای منحصر به فرد برای کاربران ایرانی. 
+                        امروز با تیمی متشکل از ۵۰ متخصص passionate، به یکی از پیشروهای صنعت تبدیل شده‌ایم.
+                    </p>
+                    
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="glass-card mt-4 mt-lg-0">
+                        <div class="icon-wrapper mx-auto">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="text-center mb-3" style="color: #ffe1a8;">رسالت ما</h3>
+                        <p class="text-center" style="color: rgba(255, 255, 255, 0.8);">
+                            ایجاد راهکارهای نوآورانه که زندگی دیجیتال را ساده‌تر، امن‌تر و لذت‌بخش‌تر می‌کند.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4">
-          <div class="card">
-            <h3 style="color:var(--gold);">تاریخچه</h3>
-            <p style="margin-top:8px; color:var(--muted)">گالری از ۱۳۹۸ آغاز به کار کرد و تاکنون میزبان چندین نمایشگاه ملی بوده است.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <h3 style="color:var(--gold);">تماس</h3>
-            <p style="margin-top:8px; color:var(--muted)">تهران — خیابان هنر — شماره تماس: ۰۲۱-XXXXXXX</p>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <footer class="site-footer">© 2025 — گالری هنری</footer>
+    <!-- بخش ارزش‌ها -->
+    <section id="mission" class="mission-section">
+        <div class="container">
+            <h2 class="section-title">ارزش‌های اصلی ما</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="glass-card text-center">
+                        <div class="icon-wrapper mx-auto">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4 class="mb-3" style="color: #ffe1a8;">نوآوری</h4>
+                        <p style="color: rgba(255, 255, 255, 0.8);">
+                            همیشه در جستجوی راه‌های جدید و خلاقانه برای حل مسائل هستیم.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="glass-card text-center">
+                        <div class="icon-wrapper mx-auto">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4 class="mb-3" style="color: #ffe1a8;">اعتماد</h4>
+                        <p style="color: rgba(255, 255, 255, 0.8);">
+                            شفافیت و صداقت پایه‌های رابطه ما با مشتریان و همکاران است.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="glass-card text-center">
+                        <div class="icon-wrapper mx-auto">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4 class="mb-3" style="color: #ffe1a8;">مشتری‌محوری</h4>
+                        <p style="color: rgba(255, 255, 255, 0.8);">
+                            رضایت کاربران نهایی اولویت اول در تمام تصمیم‌گیری‌های ماست.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="glass-card text-center">
+                        <div class="icon-wrapper mx-auto">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4 class="mb-3" style="color: #ffe1a8;">توسعه پایدار</h4>
+                        <p style="color: rgba(255, 255, 255, 0.8);">
+                            رشد متوازن و مسئولیت‌پذیری اجتماعی از اصول اساسی کسب‌وکار ماست.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </div>
+    <!-- بخش آمار -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <div class="stat-card">
+                        <div class="stat-number">+3</div>
+                        <div class="stat-label">سال تجربه</div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <div class="stat-card">
+                        <div class="stat-number">+50</div>
+                        <div class="stat-label">کارمند متخصص</div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">مشتری راضی</div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">رضایت مشتری</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش تیم -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">تیم رهبری</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card">
+                        <img src="img/mm.jpg"
+                             alt="مدیرعامل" class="team-img">
+                        <div class="team-info">
+                            <h4 class="team-name">علی محمدی</h4>
+                            <p class="team-position">مدیرعامل و بنیان‌گذار</p>
+                            <p class="team-desc">
+                                با ۱۵ سال تجربه در مدیریت فناوری و استراتژی کسب‌وکار
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card">
+                        <img src="img/z.jpg"
+                             alt="مدیر فنی" class="team-img">
+                        <div class="team-info">
+                            <h4 class="team-name">سارا کریمی</h4>
+                            <p class="team-position">مدیر فنی</p>
+                            <p class="team-desc">
+                                متخصص معماری نرم‌افزار با تمرکز بر مقیاس‌پذیری
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card">
+                        <img src="img/zz.jpg" 
+                             alt="مدیر بازاریابی" class="team-img">
+                        <div class="team-info">
+                            <h4 class="team-name">مریم احمدی</h4>
+                            <p class="team-position">مدیر بازاریابی</p>
+                            <p class="team-desc">
+                                خالق کمپین‌های خلاقانه با نتایج قابل اندازه‌گیری
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card">
+                        <img src="img/mmm.jpg" 
+                             alt="مدیر مالی" class="team-img">
+                        <div class="team-info">
+                            <h4 class="team-name">رضا حسینی</h4>
+                            <p class="team-position">مدیر مالی</p>
+                            <p class="team-desc">
+                                متخصص امور مالی با سابقه درخشان در مدیریت رشد
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="glass-card">
+                        <h2 class="mb-4" style="color: #ffe1a8;">آماده همکاری با ما هستید؟</h2>
+                        <p class="mb-4" style="color: rgba(255, 255, 255, 0.8); font-size: 1.1rem;">
+                            چه به دنبال راه‌حلی برای کسب‌وکار خود هستید و چه می‌خواهید به تیم ما بپیوندید، 
+                            مشتاق شنیدن داستان شما هستیم.
+                        </p>
+                        <div class="d-flex gap-3 justify-content-center flex-wrap">
+                            <a href="contact-us.html" class="cta-btn">تماس با ما</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<footer class="beautiful-footer">
+    
+    <div class="container">
+
+        <div class="footer-main">
+            <!-- ستون ۱: درباره ما -->
+            <div class="footer-column">
+                <h3 class="footer-title">
+                    <span class="footer-icon">🎨</span>
+                    Art Vision
+                </h3>
+                <p class="footer-description">
+                    پلتفرم هنری برای نمایش آثار هنرمندان ایرانی و بین‌المللی. 
+                    جایی که هنر دیجیتال زنده می‌شود و ایده‌ها شکل می‌گیرند.
+                </p>
+
+            </div>
+            
+            <!-- ستون ۲: لینک‌های سریع -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">لینک‌های سریع</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">صفحه اصلی</a></li>
+                    <li><a href="archive-art.html" class="footer-link">گالری آثار</a></li>
+                    <li><a href="archive-blog.html" class="footer-link"> بلاگ ها</a></li>
+                </ul>
+            </div>
+            
+            <!-- ستون ۳: اطلاعات مهم -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">اطلاعات مهم</h4>
+                <ul class="footer-links">
+                    <li><a href="rules.html" class="footer-link">مقررات و قوانین</a></li>
+                    <li><a href="faq.html" class="footer-link">سوالات متداول</a></li>
+                    <li><a href="contact-us.html" class="footer-link"> تماس با ما</a></li>
+                    <li><a href="about-us.html" class="footer-link"> درباره ما</a></li>
+                </ul>
+            </div>
+            
+            <!-- ستون ۴: خبرنامه -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">عضویت در خبرنامه</h4>
+                <p class="newsletter-text">
+                    از جدیدترین آثار و نمایشگاه‌ها مطلع شوید
+                </p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="ایمیل خود را وارد کنید" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-btn">
+                        <span class="btn-icon"></span>
+                        عضویت
+                    </button>
+                </form>
+         
+            </div>
+        </div>
+       
+        
+        <!-- کپی رایت -->
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>© 2025 Art Vision. تمامی حقوق محفوظ است.</p>
+                <p class="made-with">
+                    ساخته شده با <span class="heart">❤️</span> برای جامعه هنری
+                </p>
+            </div>
+            <div class="footer-badges">
+                <span class="badge">هنر دیجیتال</span>
+                <span class="badge">تایید شده</span>
+                <span class="badge">امن</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- اسکریپت بوت استرپ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

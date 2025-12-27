@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پرداخت آنلاین</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+       <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="bodyPay pay">
+                 
+ <!-- هدر -->
+<header class="simple-header">
+    <div class="container">
+        <nav class="navbar">
+
+            
+            <!-- دکمه منوی موبایل -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                ☰
+            </button>
+            <!-- منوی وسط -->
+            <div class="header-center">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="archive-art.html" class="nav-link">گالری</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="archive-blog.html" class="nav-link">بلاگ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about-us.html" class="nav-link">درباره ما</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact-us.html" class="nav-link">تماس با ما</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- دکمه‌های سمت چپ -->
+            <div class="header-left">
+                <a href="sinup.html"><button class="auth-btn login-btn">
+                    ورود
+                </button></a>
+                <a href="register.html"><button class="auth-btn signup-btn">
+                    ثبت نام
+                </button></a>
+            </div>
+
+        </nav>
+    </div>
+</header>
+
+
+
+
+
+    <!-- بخش اصلی پرداخت -->
+    <main class="payment-container">
+        <div class="payment-title">
+            <h1><i class="fas fa-lock"></i> پرداخت امن آنلاین</h1>
+            <p>اطلاعات پرداخت خود را وارد کنید</p>
+        </div>
+
+        <div class="payment-card">
+            <div class="payment-header">
+                <h2><i class="fas fa-credit-card"></i> جزئیات پرداخت</h2>
+            </div>
+            
+            <div class="payment-body">
+                <form class="payment-form">
+                    <div class="form-group">
+                        <label for="cardNumber">شماره کارت بانکی</label>
+                        <input type="text" id="cardNumber" class="form-control" placeholder="۱۲۳۴ ۵۶۷۸ ۹۰۱۲ ۳۴۵۶" maxlength="19">
+                        
+                        <!-- پیش نمایش کارت - اندازه واقعی -->
+                        <div class="card-preview">
+                            <div class="card-logo">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <div class="card-chip"></div>
+                            <div class="card-number" id="cardPreview">**** **** **** ****</div>
+                            <div class="card-details">
+                                <div class="card-holder">
+                                    <div style="font-size: 0.75rem; opacity: 0.7;">دارنده کارت</div>
+                                    <div id="namePreview">نام شما</div>
+                                </div>
+                                <div class="card-expiry">
+                                    <div style="font-size: 0.75rem; opacity: 0.7;">انقضا</div>
+                                    <div id="expiryPreview">MM/YY</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-row">
+                        <div class="form-group">
+                            <label for="cardHolder">نام دارنده کارت</label>
+                            <input type="text" id="cardHolder" class="form-control" placeholder="نام کامل">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="expiryDate">تاریخ انقضا</label>
+                            <input type="text" id="expiryDate" class="form-control" placeholder="MM/YY" maxlength="5">
+                        </div>
+                    </div>
+
+                    <div class="card-row">
+                        <div class="form-group">
+                            <label for="cvv">کد CVV</label>
+                            <input type="password" id="cvv" class="form-control" placeholder="***" maxlength="3">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="amount">مبلغ (ریال)</label>
+                            <input type="text" id="amount" class="form-control" placeholder="۱,۰۰۰,۰۰۰" value="۱,۵۰۰,۰۰۰">
+                        </div>
+                    </div>
+
+                    <a href="unsuccessful-payment.html" style="text-decoration: none"><button type="button" class="pay-btn">
+                        <i class="fas"></i>
+                        پرداخت مبلغ
+                    </button></a>
+                </form>
+            </div>
+        </div>
+
+        <!-- روش‌های پرداخت جایگزین -->
+        <div class="payment-methods">
+            <div class="method-card">
+                <i class="fas fa-university"></i>
+                <h3>درگاه بانکی</h3>
+                <p>پرداخت مستقیم از طریق درگاه امن بانک</p>
+            </div>
+            
+            <div class="method-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>کیف پول</h3>
+                <p>پرداخت با کیف پول الکترونیکی</p>
+            </div>
+            
+            <div class="method-card">
+                <i class="fas fa-qrcode"></i>
+                <h3>کیوآرکد</h3>
+                <p>پرداخت با اسکن کد QR</p>
+            </div>
+        </div>
+
+        <div class="payment-footer">
+            <p>پرداخت شما با استفاده از پروتکل SSL رمزنگاری شده و کاملاً امن می‌باشد</p>
+            <div class="security-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>پرداخت ۱۰۰% امن</span>
+            </div>
+        </div>
+    </main>
+
+
+<footer class="beautiful-footer">
+    
+    <div class="container">
+
+        <div class="footer-main">
+            <!-- ستون ۱: درباره ما -->
+            <div class="footer-column">
+                <h3 class="footer-title">
+                    <span class="footer-icon">🎨</span>
+                    Art Vision
+                </h3>
+                <p class="footer-description">
+                    پلتفرم هنری برای نمایش آثار هنرمندان ایرانی و بین‌المللی. 
+                    جایی که هنر دیجیتال زنده می‌شود و ایده‌ها شکل می‌گیرند.
+                </p>
+
+            </div>
+            
+            <!-- ستون ۲: لینک‌های سریع -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">لینک‌های سریع</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">صفحه اصلی</a></li>
+                    <li><a href="archive-art.html" class="footer-link">گالری آثار</a></li>
+                    <li><a href="archive-blog.html" class="footer-link"> بلاگ ها</a></li>
+                </ul>
+            </div>
+            
+            <!-- ستون ۳: اطلاعات مهم -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">اطلاعات مهم</h4>
+                <ul class="footer-links">
+                    <li><a href="rules.html" class="footer-link">مقررات و قوانین</a></li>
+                    <li><a href="faq.html" class="footer-link">سوالات متداول</a></li>
+                    <li><a href="contact-us.html" class="footer-link"> تماس با ما</a></li>
+                    <li><a href="about-us.html" class="footer-link"> درباره ما</a></li>
+                </ul>
+            </div>
+            
+            <!-- ستون ۴: خبرنامه -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">عضویت در خبرنامه</h4>
+                <p class="newsletter-text">
+                    از جدیدترین آثار و نمایشگاه‌ها مطلع شوید
+                </p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="ایمیل خود را وارد کنید" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-btn">
+                        <span class="btn-icon"></span>
+                        عضویت
+                    </button>
+                </form>
+         
+            </div>
+        </div>
+       
+        
+        <!-- کپی رایت -->
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>© 2025 Art Vision. تمامی حقوق محفوظ است.</p>
+                <p class="made-with">
+                    ساخته شده با <span class="heart">❤️</span> برای جامعه هنری
+                </p>
+            </div>
+            <div class="footer-badges">
+                <span class="badge">هنر دیجیتال</span>
+                <span class="badge">تایید شده</span>
+                <span class="badge">امن</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>

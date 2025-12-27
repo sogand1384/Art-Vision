@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قوانین و مقررات | حریم خصوصی</title>
+    <!-- بوت استرپ 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- فونت آیکون -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ <!-- هدر -->
+<header class="simple-header">
+    <div class="container">
+        <nav class="navbar">
+
+            
+            <!-- دکمه منوی موبایل -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                ☰
+            </button>
+            <!-- منوی وسط -->
+            <div class="header-center">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="archive-art.html" class="nav-link">گالری</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="archive-blog.html" class="nav-link">بلاگ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about-us.html" class="nav-link">درباره ما</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact-us.html" class="nav-link">تماس با ما</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- دکمه‌های سمت چپ -->
+            <div class="header-left">
+                <a href="sinup.html"><button class="auth-btn login-btn">
+                    ورود
+                </button></a>
+                <a href="register.html"><button class="auth-btn signup-btn">
+                    ثبت نام
+                </button></a>
+            </div>
+
+        </nav>
+    </div>
+</header>
+
+    <!-- بخش هیرو -->
+    <section class="policy-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto text-center">
+                    <h1 class="hero-title">قوانین و مقررات و حریم خصوصی</h1>
+                    <p class="hero-subtitle">
+                        در این صفحه می‌توانید کلیه قوانین، مقررات و سیاست‌های حریم خصوصی سایت ما را مطالعه کنید.
+                        لطفاً قبل از استفاده از خدمات، این صفحه را به دقت بخوانید.
+                    </p>
+                </div>
+            </div>
+
+            <!-- تب‌ها -->
+            <div class="policy-tabs">
+                <button class="policy-tab active" onclick="showSection('terms')">
+                    <i class="fas fa-gavel"></i>
+                    قوانین و مقررات
+                </button>
+                <button class="policy-tab" onclick="showSection('privacy')">
+                    <i class="fas fa-shield-alt"></i>
+                    حریم خصوصی
+                </button>
+                <button class="policy-tab" onclick="showSection('cookies')">
+                    <i class="fas fa-cookie-bite"></i>
+                    سیاست کوکی‌ها
+                </button>
+                <button class="policy-tab" onclick="showSection('refund')">
+                    <i class="fas fa-undo-alt"></i>
+                    سیاست بازپرداخت
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- محتوای قوانین -->
+    <section class="policy-content">
+        <div class="container">
+            <!-- بخش قوانین و مقررات -->
+            <div id="terms-section" class="policy-section">
+                <h2 class="section-title">
+                    <i class="fas fa-gavel"></i>
+                    قوانین و مقررات استفاده از خدمات
+                </h2>
+                
+                <p class="policy-text">
+                    با استفاده از خدمات سایت ما، شما موافقت می‌کنید که این قوانین و مقررات را رعایت کنید.
+                    لطفاً این شرایط را با دقت مطالعه کنید.
+                </p>
+                
+                <h3 class="mt-4 mb-3" style="color: #ffe1a8;">مقررات کلی</h3>
+                <ul class="policy-list">
+                    <li>کاربر باید حداقل ۱۸ سال سن داشته باشد یا با نظارت والدین از خدمات استفاده کند.</li>
+                    <li>ارائه اطلاعات نادرست یا جعلی ممنوع است.</li>
+                    <li>هرگونه سوءاستفاده از سیستم و خدمات سایت پیگرد قانونی خواهد داشت.</li>
+                    <li>کاربر موظف است اطلاعات حساب کاربری خود را محرمانه نگه دارد.</li>
+                    <li>مسئولیت هرگونه فعالیت در حساب کاربری بر عهده صاحب حساب است.</li>
+                </ul>
+                
+                <h3 class="mt-4 mb-3" style="color: #ffe1a8;">مقررات محتوایی</h3>
+                <p class="policy-text">
+                    کاربران مجاز به ارسال محتوای زیر نمی‌باشند:
+                </p>
+                <ul class="policy-list">
+                    <li>محتوای توهین‌آمیز، تبعیض‌آمیز یا خشونت‌آمیز</li>
+                    <li>محتوای غیرقانونی یا خلاف عرف عمومی</li>
+                    <li>محتوای نقض کننده حقوق مالکیت فکری</li>
+                    <li>محتوای اسپم یا تبلیغاتی غیرمجاز</li>
+                    <li>اطلاعات شخصی دیگران بدون رضایت آن‌ها</li>
+                </ul>
+                
+                <h3 class="mt-4 mb-3" style="color: #ffe1a8;">تعلیق و لغو حساب</h3>
+                <p class="policy-text">
+                    ما حق تعلیق یا لغو حساب کاربرانی که این قوانین را نقض کنند، محفوظ می‌داریم.
+                </p>
+            </div>
+
+            <!-- بخش حریم خصوصی -->
+            <div id="privacy-section" class="policy-section" style="display: none;">
+                <h2 class="section-title">
+                    <i class="fas fa-shield-alt"></i>
+                    سیاست حفظ حریم خصوصی
+                </h2>
+                
+                <p class="policy-text">
+                    ما به حریم خصوصی شما احترام می‌گذاریم و متعهد به حفظ امنیت اطلاعات شخصی شما هستیم.
+                </p>
+                
+                <h3 class="mt-4 mb-3" style="color: #ffe1a8;">اطلاعاتی که جمع‌آوری می‌کنیم</h3>
+                <table class="policy-table">
+                    <thead>
+                        <tr>
+                            <th>نوع اطلاعات</th>
+                            <th>هدف جمع‌آوری</th>
+                            <th>مدت نگهداری</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>اطلاعات ثبت نام (نام، ایمیل)</td>
+                            <td>ایجاد حساب کاربری و احراز هویت</td>
+                            <td>تا زمان وجود حساب</td>
+                        </tr>
+                        <tr>
+                            <td>اطلاعات پرداخت</td>
+                            <td>پردازش تراکنش‌ها</td>
+                            <td>۷ سال طبق قوانین مالی</td>
+                        </tr>
+                        <tr>
+                            <td>اطلاعات استفاده از سایت</td>
+                            <td>بهبود خدمات و تجربه کاربری</td>
+                            <td>۲ سال</td>
+                        </tr>
+                        <tr>
+                            <td>کوکی‌ها</td>
+                            <td>ذخیره تنظیمات کاربر</td>
+                            <td>مطابق تنظیمات مرورگر</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3 class="mt-4 mb-3" style="color: #ffe1a8;">اشتراک اطلاعات با اشخاص ثالث</h3>
+                <p class="policy-text">
+                    ما اطلاعات شما را به اشخاص ثالث نمی‌فروشیم. تنها در موارد زیر ممکن است اطلاعات را به اشتراک بگذاریم:
+                </p>
+                <ul class="policy-list">
+                    <li>با رضایت صریح شما</li>
+                    <li>برای ارائه خدمات مورد درخواست شما</li>
+                    <li>برای رعایت قوانین و مقررات</li>
+                    <li>برای محافظت از حقوق و امنیت ما و دیگران</li>
+                </ul>
+                
+                <h3 class="mt-4 mb-3" style="color: #ffe1a8;">حقوق شما</h3>
+                <div class="row mt-4">
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-start gap-3">
+                            <i class="fas fa-eye mt-1" style="color: #ffe1a8;"></i>
+                            <div>
+                                <h4 style="color: #ffe1a8; font-size: 1.1rem;">دسترسی</h4>
+                                <p style="color: #f8e5c8; font-size: 0.95rem;">حق درخواست کپی اطلاعات شخصی خود</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-start gap-3">
+                            <i class="fas fa-edit mt-1" style="color: #ffe1a8;"></i>
+                            <div>
+                                <h4 style="color: #ffe1a8; font-size: 1.1rem;">اصلاح</h4>
+                                <p style="color: #f8e5c8; font-size: 0.95rem;">حق اصلاح اطلاعات نادرست</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-start gap-3">
+                            <i class="fas fa-trash-alt mt-1" style="color: #ffe1a8;"></i>
+                            <div>
+                                <h4 style="color: #ffe1a8; font-size: 1.1rem;">حذف</h4>
+                                <p style="color: #f8e5c8; font-size: 0.95rem;">حق درخواست حذف اطلاعات</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-start gap-3">
+                            <i class="fas fa-ban mt-1" style="color: #ffe1a8;"></i>
+                            <div>
+                                <h4 style="color: #ffe1a8; font-size: 1.1rem;">محدودیت پردازش</h4>
+                                <p style="color: #f8e5c8; font-size: 0.95rem;">حق محدود کردن پردازش اطلاعات</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- بخش سیاست کوکی‌ها -->
+            <div id="cookies-section" class="policy-section" style="display: none;">
+                <h2 class="section-title">
+                    <i class="fas fa-cookie-bite"></i>
+                    سیاست استفاده از کوکی‌ها
+                </h2>
+                
+                <p class="policy-text">
+                    کوکی‌ها فایل‌های متنی کوچکی هستند که بر روی دستگاه شما ذخیره می‌شوند و به ما کمک می‌کنند تجربه بهتری را برای شما فراهم کنیم.
+                </p>
+                
+                <h3 class="mt-4 mb-3" style="color: #ffe1a8;">انواع کوکی‌های استفاده شده</h3>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <i class="fas fa-cookie"></i>
+                            کوکی‌های ضروری
+                        </div>
+                        <p style="color: #f8e5c8;">
+                            برای عملکرد اصلی سایت ضروری هستند. بدون این کوکی‌ها، سایت به درستی کار نمی‌کند.
+                        </p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <i class="fas fa-chart-line"></i>
+                            کوکی‌های تحلیلی
+                        </div>
+                        <p style="color: #f8e5c8;">
+                            به ما کمک می‌کنند نحوه استفاده از سایت را درک کنیم و خدمات را بهبود بخشیم.
+                        </p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <i class="fas fa-bullhorn"></i>
+                            کوکی‌های عملکردی
+                        </div>
+                        <p style="color: #f8e5c8;">
+                            تنظیمات و ترجیحات شما را ذخیره می‌کنند تا تجربه شخصی‌سازی شده‌ای داشته باشید.
+                        </p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <i class="fas fa-ad"></i>
+                            کوکی‌های تبلیغاتی
+                        </div>
+                        <p style="color: #f8e5c8;">
+                            برای نمایش تبلیغات مرتبط با علایق شما استفاده می‌شوند.
+                        </p>
+                    </div>
+                </div>
+                
+                <h3 class="mt-4 mb-3" style="color: #ffe1a8;">مدیریت کوکی‌ها</h3>
+                <p class="policy-text">
+                    شما می‌توانید کوکی‌ها را از طریق تنظیمات مرورگر خود مدیریت یا حذف کنید. 
+                    توجه داشته باشید که غیرفعال کردن برخی کوکی‌ها ممکن است بر عملکرد سایت تأثیر بگذارد.
+                </p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-4 mb-3">
+                        <div class="text-center p-3" style="background: rgba(255, 225, 168, 0.05); border-radius: 10px;">
+                            <i class="fas fa-chrome fa-2x mb-2" style="color: #ffe1a8;"></i>
+                            <h5 style="color: #ffe1a8;">Google Chrome</h5>
+                            <p style="color: #f8e5c8; font-size: 0.9rem;">تنظیمات → حریم خصوصی و امنیت</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="text-center p-3" style="background: rgba(255, 225, 168, 0.05); border-radius: 10px;">
+                            <i class="fas fa-firefox fa-2x mb-2" style="color: #ffe1a8;"></i>
+                            <h5 style="color: #ffe1a8;">Mozilla Firefox</h5>
+                            <p style="color: #f8e5c8; font-size: 0.9rem;">تنظیمات → حریم خصوصی و امنیت</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="text-center p-3" style="background: rgba(255, 225, 168, 0.05); border-radius: 10px;">
+                            <i class="fab fa-safari fa-2x mb-2" style="color: #ffe1a8;"></i>
+                            <h5 style="color: #ffe1a8;">Safari</h5>
+                            <p style="color: #f8e5c8; font-size: 0.9rem;">تنظیمات → حریم خصوصی</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- بخش سیاست بازپرداخت -->
+            <div id="refund-section" class="policy-section" style="display: none;">
+                <h2 class="section-title">
+                    <i class="fas fa-undo-alt"></i>
+                    سیاست بازپرداخت و ضمانت
+                </h2>
+                
+                <p class="policy-text">
+                    ما متعهد به رضایت مشتریان هستیم. در صورت عدم رضایت از خدمات، سیاست بازپرداخت زیر اعمال می‌شود.
+                </p>
+                
+                <h3 class="mt-4 mb-3" style="color: #ffe1a8;">شرایط بازپرداخت</h3>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6 mb-4">
+                        <div class="p-4 h-100" style="background: rgba(255, 225, 168, 0.05); border-radius: 15px; border: 1px solid rgba(255, 225, 168, 0.1);">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div style="width: 40px; height: 40px; background: rgba(255, 225, 168, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                                </div>
+                                <h4 style="color: #ffe1a8; margin: 0;">موارد قابل بازپرداخت</h4>
+                            </div>
+                            <ul style="color: #f8e5c8; padding-right: 20px;">
+                                <li>عدم ارائه خدمات به صورت کامل</li>
+                                <li>مشکلات فنی غیرقابل حل از سمت ما</li>
+                                <li>عدم تطابق خدمات با توضیحات ارائه شده</li>
+                                <li>درخواست در مدت ۱۴ روز پس از خرید</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="p-4 h-100" style="background: rgba(255, 225, 168, 0.05); border-radius: 15px; border: 1px solid rgba(255, 225, 168, 0.1);">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div style="width: 40px; height: 40px; background: rgba(255, 225, 168, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-times-circle" style="color: #f44336;"></i>
+                                </div>
+                                <h4 style="color: #ffe1a8; margin: 0;">موارد غیرقابل بازپرداخت</h4>
+                            </div>
+                            <ul style="color: #f8e5c8; padding-right: 20px;">
+                                <li>تغییر نظر پس از دریافت خدمات</li>
+                                <li>عدم مطالعه دقیق توضیحات خدمات</li>
+                                <li>مشکلات ناشی از سهل‌انگاری کاربر</li>
+                                <li>بیش از ۱۴ روز از تاریخ خرید گذشته باشد</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="mt-4 mb-3" style="color: #ffe1a8;">مراحل درخواست بازپرداخت</h3>
+                <div class="row text-center mt-4">
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="p-3">
+                            <div class="mb-3" style="width: 60px; height: 60px; background: rgba(255, 225, 168, 0.1); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; border: 2px solid rgba(255, 225, 168, 0.3);">
+                                <span style="color: #ffe1a8; font-weight: bold;">۱</span>
+                            </div>
+                            <h5 style="color: #ffe1a8;">ارسال درخواست</h5>
+                            <p style="color: #f8e5c8; font-size: 0.9rem;">از طریق پنل کاربری یا ایمیل</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="p-3">
+                            <div class="mb-3" style="width: 60px; height: 60px; background: rgba(255, 225, 168, 0.1); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; border: 2px solid rgba(255, 225, 168, 0.3);">
+                                <span style="color: #ffe1a8; font-weight: bold;">۲</span>
+                            </div>
+                            <h5 style="color: #ffe1a8;">بررسی کارشناس</h5>
+                            <p style="color: #f8e5c8; font-size: 0.9rem;">بررسی درخواست طی ۷۲ ساعت</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="p-3">
+                            <div class="mb-3" style="width: 60px; height: 60px; background: rgba(255, 225, 168, 0.1); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; border: 2px solid rgba(255, 225, 168, 0.3);">
+                                <span style="color: #ffe1a8; font-weight: bold;">۳</span>
+                            </div>
+                            <h5 style="color: #ffe1a8;">تأیید و پرداخت</h5>
+                            <p style="color: #f8e5c8; font-size: 0.9rem;">پرداخت طی ۷ روز کاری</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="p-3">
+                            <div class="mb-3" style="width: 60px; height: 60px; background: rgba(255, 225, 168, 0.1); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; border: 2px solid rgba(255, 225, 168, 0.3);">
+                                <span style="color: #ffe1a8; font-weight: bold;">۴</span>
+                            </div>
+                            <h5 style="color: #ffe1a8;">تکمیل فرآیند</h5>
+                            <p style="color: #f8e5c8; font-size: 0.9rem;">ارسال تأییدیه به کاربر</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="alert mt-4" style="background: rgba(255, 225, 168, 0.1); border: 1px solid rgba(255, 225, 168, 0.2); border-radius: 10px; padding: 20px; color: #f8e5c8;">
+                    <div class="d-flex align-items-start gap-3">
+                        <i class="fas fa-info-circle mt-1" style="color: #ffe1a8;"></i>
+                        <div>
+                            <h5 style="color: #ffe1a8; margin-bottom: 10px;">نکته مهم</h5>
+                            <p style="margin: 0;">
+                                بازپرداخت به همان روش پرداخت اولیه انجام می‌شود. در صورت پرداخت با کارت بانکی، 
+                                مبلغ طی ۳ تا ۷ روز کاری به حساب شما بازمی‌گردد.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- بخش توافق -->
+            <div class="agreement-section">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="agree-checkbox" class="policy-checkbox">
+                    <label for="agree-checkbox" class="checkbox-label">
+                        من تمامی قوانین، مقررات و سیاست‌های حریم خصوصی فوق را به دقت مطالعه کرده‌ام و با آن‌ها موافقت می‌کنم.
+                    </label>
+                </div>
+                <button class="agree-btn" id="agree-btn" disabled>
+                    <i class="fas fa-check-circle"></i>
+                    تأیید و ادامه
+                </button>
+            </div>
+
+            <!-- آخرین بروزرسانی -->
+            <div class="update-info">
+                <i class="fas fa-sync-alt me-2" style="color: #ffe1a8;"></i>
+                آخرین بروزرسانی: 
+                <span class="update-date">۱۴۰۳/۰۱/۲۰</span>
+                <p class="mt-2 mb-0" style="color: rgba(248, 229, 200, 0.7); font-size: 0.9rem;">
+                    ما ممکن است این سیاست‌ها را به‌روزرسانی کنیم. لطفاً به طور دوره‌ای این صفحه را بررسی کنید.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+<footer class="beautiful-footer">
+    
+    <div class="container">
+
+        <div class="footer-main">
+            <!-- ستون ۱: درباره ما -->
+            <div class="footer-column">
+                <h3 class="footer-title">
+                    <span class="footer-icon">🎨</span>
+                    Art Vision
+                </h3>
+                <p class="footer-description">
+                    پلتفرم هنری برای نمایش آثار هنرمندان ایرانی و بین‌المللی. 
+                    جایی که هنر دیجیتال زنده می‌شود و ایده‌ها شکل می‌گیرند.
+                </p>
+
+            </div>
+            
+            <!-- ستون ۲: لینک‌های سریع -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">لینک‌های سریع</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">صفحه اصلی</a></li>
+                    <li><a href="archive-art.html" class="footer-link">گالری آثار</a></li>
+                    <li><a href="archive-blog.html" class="footer-link"> بلاگ ها</a></li>
+                </ul>
+            </div>
+            
+            <!-- ستون ۳: اطلاعات مهم -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">اطلاعات مهم</h4>
+                <ul class="footer-links">
+                    <li><a href="rules.html" class="footer-link">مقررات و قوانین</a></li>
+                    <li><a href="faq.html" class="footer-link">سوالات متداول</a></li>
+                    <li><a href="contact-us.html" class="footer-link"> تماس با ما</a></li>
+                    <li><a href="about-us.html" class="footer-link"> درباره ما</a></li>
+                </ul>
+            </div>
+            
+            <!-- ستون ۴: خبرنامه -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">عضویت در خبرنامه</h4>
+                <p class="newsletter-text">
+                    از جدیدترین آثار و نمایشگاه‌ها مطلع شوید
+                </p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="ایمیل خود را وارد کنید" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-btn">
+                        <span class="btn-icon"></span>
+                        عضویت
+                    </button>
+                </form>
+         
+            </div>
+        </div>
+       
+        
+        <!-- کپی رایت -->
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>© 2025 Art Vision. تمامی حقوق محفوظ است.</p>
+                <p class="made-with">
+                    ساخته شده با <span class="heart">❤️</span> برای جامعه هنری
+                </p>
+            </div>
+            <div class="footer-badges">
+                <span class="badge">هنر دیجیتال</span>
+                <span class="badge">تایید شده</span>
+                <span class="badge">امن</span>
+            </div>
+        </div>
+    </div>
+</footer>
+ 
+
+    <!-- اسکریپت بوت استرپ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="js/script.js"></script>
+</body>
+</html>

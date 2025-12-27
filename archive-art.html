@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آرشیو آثار هنری</title>
+    <!-- بوت استرپ 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- فونت آیکون -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+
+<!-- هدر -->
+<header class="simple-header">
+    <div class="container">
+        <nav class="navbar">
+
+            
+            <!-- دکمه منوی موبایل -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                ☰
+            </button>
+ 
+            
+
+
+            <!-- منوی وسط -->
+            <div class="header-center">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="archive-art.html" class="nav-link active">گالری</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="archive-blog.html" class="nav-link">بلاگ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about-us.html" class="nav-link">درباره ما</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact-us.html" class="nav-link">تماس با ما</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- دکمه‌های سمت چپ -->
+            <div class="header-left">
+               <a href="sinup.html"> <button class="auth-btn login-btn">
+                    ورود
+                </button></a>
+               <a href="register.html"> <button class="auth-btn signup-btn">
+                    ثبت نام
+                </button></a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+
+    <!-- محتوای اصلی -->
+    <main class="container">
+        <!-- آمار کلی -->
+        <div class="artgal-stats-container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="artgal-stat-box">
+                        <i class="fas fa-paint-brush artgal-stat-icon"></i>
+                        <span class="artgal-stat-big">۱,۲۴۵</span>
+                        <span class="artgal-stat-text">نقاشی ثبت شده</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="artgal-stat-box">
+                        <i class="fas fa-users artgal-stat-icon"></i>
+                        <span class="artgal-stat-big">۸۷</span>
+                        <span class="artgal-stat-text">نقاش فعال</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="artgal-stat-box">
+                        <i class="fas fa-eye artgal-stat-icon"></i>
+                        <span class="artgal-stat-big">۳۲.۵K</span>
+                        <span class="artgal-stat-text">بازدید ماهانه</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="artgal-stat-box">
+                        <i class="fas fa-heart artgal-stat-icon"></i>
+                        <span class="artgal-stat-big">۶.۸K</span>
+                        <span class="artgal-stat-text">لایک آثار</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- جستجو و تب‌ها -->
+        <div class="row">
+            <div class="col-lg-9">
+                <!-- جستجو -->
+                <div class="artgal-search-box">
+                    <input type="text" class="artgal-search-input" placeholder="جستجوی نقاشی، هنرمند، سبک یا موضوع...">
+                    <button class="artgal-search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <!-- تب‌های نمایش -->
+                <div class="artgal-view-tabs">
+                    <button class="artgal-view-tab active" onclick="artgalSwitchView('all')">
+                        همه آثار
+                    </button>
+                    <button class="artgal-view-tab" onclick="artgalSwitchView('featured')">
+                        منتخب گالری
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- فیلترها -->
+        <div class="artgal-filters-container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="artgal-filter-group">
+                        <label class="artgal-filter-label">سبک نقاشی</label>
+                        <select class="artgal-filter-select">
+                            <option value="" style="color: #000">همه سبک‌ها</option>
+                            <option value="impressionism" style="color: #000">امپرسیونیسم</option>
+                            <option value="abstract" style="color: #000">انتزاعی</option>
+                            <option value="realism" style="color: #000">رئالیسم</option>
+                            <option value="expressionism" style="color: #000">اکسپرسیونیسم</option>
+                            <option value="cubism" style="color: #000">کوبیسم</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="artgal-filter-group">
+                        <label class="artgal-filter-label">تکنیک</label>
+                        <select class="artgal-filter-select">
+                            <option value="" style="color: #000">همه تکنیک‌ها</option>
+                            <option value="oil" style="color: #000">رنگ روغن</option>
+                            <option value="acrylic" style="color: #000">آکریلیک</option>
+                            <option value="watercolor" style="color: #000">آبرنگ</option>
+                            <option value="pastel" style="color: #000">پاستل</option>
+                            <option value="digital" style="color: #000">دیجیتال</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="artgal-filter-group">
+                        <label class="artgal-filter-label">مرتب‌سازی</label>
+                        <select class="artgal-filter-select">
+                            <option value="newest" style="color: #000">جدیدترین</option>
+                            <option value="popular" style="color: #000">محبوب‌ترین</option>
+                            <option value="views" style="color: #000">پر بازدیدترین</option>
+                            <option value="likes" style="color: #000">بیشترین لایک</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="artgal-filter-group">
+                        <label class="artgal-filter-label">&nbsp;</label>
+                        <button class="artgal-filter-btn" onclick="artgalApplyFilters()">
+                            <i class="fas fa-filter me-2"></i>
+                            اعمال فیلتر
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- گالری آثار نقاشی -->
+        <div id="artgalArtworksGallery">
+            <h3 class="artgal-filter-title mb-4">گالری نقاشی‌ها</h3>
+            
+            <div class="row g-4">
+                <!-- نقاشی ۱ -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="artgal-artwork-card" onclick="artgalViewArtwork(1)">
+                        <div class="artgal-artwork-image-container">
+                            <img src="img/a.jpg" 
+                                 alt="پرتره" class="artgal-artwork-image">
+                            <div class="artgal-artwork-overlay"></div>
+                            <div class="artgal-artwork-badge">امپرسیونیسم</div>
+                        </div>
+                        <div class="artgal-artwork-info">
+                            <h4 class="artgal-artwork-title">الهه زیبایی</h4>
+                            <div class="artgal-artwork-artist">
+                                <img src="img/z.jpg" 
+                                     alt="سارا احمدی" class="artgal-artist-avatar">
+                                <span>سارا احمدی</span>
+                            </div>
+                            <p class="artgal-artwork-description">
+                                نقاشی رنگ روغن با الهام از کلیسای اطلس
+                            </p>
+                            <div class="artgal-artwork-meta">
+                                <div class="artgal-meta-item">
+                                    <i class="fas fa-paint-brush artgal-meta-icon"></i>
+                                    <span>رنگ روغن</span>
+                                </div>
+                                <div class="artgal-meta-item">
+                                    <i class="fas fa-calendar-alt artgal-meta-icon"></i>
+                                    <span>۱۴۰۲</span>
+                                </div>
+                                <a href="single-art.html" class="artgal-view-btn" onclick="event.stopPropagation(); artgalViewArtwork(1)">
+                                    مشاهده کامل
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- نقاشی ۲ -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="artgal-artwork-card" onclick="artgalViewArtwork(2)">
+                        <div class="artgal-artwork-image-container">
+                            <img src="img/l.jpg" 
+                                 alt="رقص رنگ‌ها" class="artgal-artwork-image">
+                            <div class="artgal-artwork-overlay"></div>
+                            <div class="artgal-artwork-badge">انتزاعی</div>
+                        </div>
+                        <div class="artgal-artwork-info">
+                            <h4 class="artgal-artwork-title">رقص رنگ‌ها</h4>
+                            <div class="artgal-artwork-artist">
+                                <img src="img/mm.jpg" 
+                                     alt="رضا محمودی" class="artgal-artist-avatar">
+                                <span>رضا محمودی</span>
+                            </div>
+                            <p class="artgal-artwork-description">
+                                ترکیب رنگ‌های زنده و حرکت قلم مو در سبک انتزاعی مدرن
+                            </p>
+                            <div class="artgal-artwork-meta">
+                                <div class="artgal-meta-item">
+                                    <i class="fas fa-paint-brush artgal-meta-icon"></i>
+                                    <span>آکریلیک</span>
+                                </div>
+                                <div class="artgal-meta-item">
+                                    <i class="fas fa-calendar-alt artgal-meta-icon"></i>
+                                    <span>۱۴۰۱</span>
+                                </div>
+                                <a href="single-art.html" class="artgal-view-btn" onclick="event.stopPropagation(); artgalViewArtwork(2)">
+                                    مشاهده کامل
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- نقاشی ۳ -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="artgal-artwork-card" onclick="artgalViewArtwork(3)">
+                        <div class="artgal-artwork-image-container">
+                            <img src="img/o.jpg" 
+                                 alt="شب پر ستاره" class="artgal-artwork-image">
+                            <div class="artgal-artwork-overlay"></div>
+                            <div class="artgal-artwork-badge">رئالیسم</div>
+                        </div>
+                        <div class="artgal-artwork-info">
+                            <h4 class="artgal-artwork-title">شب پر ستاره</h4>
+                            <div class="artgal-artwork-artist">
+                                <img src="img/zz.jpg" 
+                                     alt="مریم کریمی" class="artgal-artist-avatar">
+                                <span>مریم کریمی</span>
+                            </div>
+                            <p class="artgal-artwork-description">
+                                تصویر واقع‌گرایانه از زیبایی‌های شب پرستاره دریا با جزئیات دقیق
+                            </p>
+                            <div class="artgal-artwork-meta">
+                                <div class="artgal-meta-item">
+                                    <i class="fas fa-paint-brush artgal-meta-icon"></i>
+                                    <span>آبرنگ</span>
+                                </div>
+                                <div class="artgal-meta-item">
+                                    <i class="fas fa-calendar-alt artgal-meta-icon"></i>
+                                    <span>۱۴۰۳</span>
+                                </div>
+                                <a href="single-art.html" class="artgal-view-btn" onclick="event.stopPropagation(); artgalViewArtwork(3)">
+                                    مشاهده کامل
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- نقاشی ۴ -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="artgal-artwork-card" onclick="artgalViewArtwork(4)">
+                        <div class="artgal-artwork-image-container">
+                            <img src="img/c.jpg" 
+                                 alt="لبخند ژکوند" class="artgal-artwork-image">
+                            <div class="artgal-artwork-overlay"></div>
+                            <div class="artgal-artwork-badge">اکسپرسیونیسم</div>
+                        </div>
+                        <div class="artgal-artwork-info">
+                            <h4 class="artgal-artwork-title">لبخند ژکوند</h4>
+                            <div class="artgal-artwork-artist">
+                                <img src="img/mm.jpg" 
+                                     alt="علی حسینی" class="artgal-artist-avatar">
+                                <span>علی حسینی</span>
+                            </div>
+                            <p class="artgal-artwork-description">
+                                به تصویر کشیدن دوباره لبخند زیبای ژکوند
+                            </p>
+                            <div class="artgal-artwork-meta">
+                                <div class="artgal-meta-item">
+                                    <i class="fas fa-paint-brush artgal-meta-icon"></i>
+                                    <span>رنگ روغن</span>
+                                </div>
+                                <div class="artgal-meta-item">
+                                    <i class="fas fa-calendar-alt artgal-meta-icon"></i>
+                                    <span>۱۴۰۰</span>
+                                </div>
+                                <a href="single-art.html" class="artgal-view-btn" onclick="event.stopPropagation(); artgalViewArtwork(4)">
+                                    مشاهده کامل
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- نقاشی ۵ -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="artgal-artwork-card" onclick="artgalViewArtwork(5)">
+                        <div class="artgal-artwork-image-container">
+                            <img src="img/p.jpg" 
+                                 alt="جیغ" class="artgal-artwork-image">
+                            <div class="artgal-artwork-overlay"></div>
+                            <div class="artgal-artwork-badge">رئالیسم</div>
+                        </div>
+                        <div class="artgal-artwork-info">
+                            <h4 class="artgal-artwork-title">جیغ</h4>
+                            <div class="artgal-artwork-artist">
+                                <img src="img/zz.jpg" 
+                                     alt="نازنین رضایی" class="artgal-artist-avatar">
+                                <span>نازنین رضایی</span>
+                            </div>
+                            <p class="artgal-artwork-description">
+                                تابلوی جیغ اثری با تمرکز بر بیان احساسات 
+                            </p>
+                            <div class="artgal-artwork-meta">
+                                <div class="artgal-meta-item">
+                                    <i class="fas fa-paint-brush artgal-meta-icon"></i>
+                                    <span>پاستل</span>
+                                </div>
+                                <div class="artgal-meta-item">
+                                    <i class="fas fa-calendar-alt artgal-meta-icon"></i>
+                                    <span>۱۴۰۲</span>
+                                </div>
+                                <a href="single-art.html" class="artgal-view-btn" onclick="event.stopPropagation(); artgalViewArtwork(5)">
+                                    مشاهده کامل
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- نقاشی ۶ -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="artgal-artwork-card" onclick="artgalViewArtwork(6)">
+                        <div class="artgal-artwork-image-container">
+                            <img src="img/q.jpg" 
+                                 alt="باغ سرسبز" class="artgal-artwork-image">
+                            <div class="artgal-artwork-overlay"></div>
+                            <div class="artgal-artwork-badge">امپرسیونیسم</div>
+                        </div>
+                        <div class="artgal-artwork-info">
+                            <h4 class="artgal-artwork-title">باغ سرسبز</h4>
+                            <div class="artgal-artwork-artist">
+                                <img src="img/mmm.jpg" 
+                                     alt="امیر جعفری" class="artgal-artist-avatar">
+                                <span>امیر جعفری</span>
+                            </div>
+                            <p class="artgal-artwork-description">
+                                بازسازی باغ سرسبز با سبک امپرسیونیستی و رنگ‌های لطیف
+                            </p>
+                            <div class="artgal-artwork-meta">
+                                <div class="artgal-meta-item">
+                                    <i class="fas fa-paint-brush artgal-meta-icon"></i>
+                                    <span>آبرنگ</span>
+                                </div>
+                                <div class="artgal-meta-item">
+                                    <i class="fas fa-calendar-alt artgal-meta-icon"></i>
+                                    <span>۱۴۰۱</span>
+                                </div>
+                                <a href="single-art.html" class="artgal-view-btn" onclick="event.stopPropagation(); artgalViewArtwork(6)">
+                                    مشاهده کامل
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- پاگیشن -->
+        <div class="artgal-pagination">
+            <button class="artgal-page-btn" onclick="artgalChangePage(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <button class="artgal-page-btn active">1</button>
+            <button class="artgal-page-btn" onclick="artgalChangePage(2)">2</button>
+            <button class="artgal-page-btn" onclick="artgalChangePage(3)">3</button>
+            <button class="artgal-page-btn" onclick="artgalChangePage(4)">4</button>
+            <button class="artgal-page-btn" onclick="artgalChangePage(5)">5</button>
+            <button class="artgal-page-btn" onclick="artgalChangePage(2)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+        </div>
+
+        <!-- دکمه مشاهده بیشتر -->
+        <div class="text-center mt-5">
+            <button class="artgal-filter-btn" style="width: auto; padding: 12px 40px;" onclick="artgalLoadMore()">
+                <i class="fas fa-plus me-2"></i>
+                بارگذاری نقاشی‌های بیشتر
+            </button>
+        </div>
+    </main>
+
+    <!-- مدال نمایش کامل اثر -->
+    <div class="artgal-modal-overlay" id="artgalArtworkModal">
+        <div class="artgal-modal-content">
+            <button class="artgal-modal-close" onclick="artgalCloseModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="artgalModalContent">
+                <!-- محتوای مدال توسط جاوااسکریپت پر می‌شود -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+<footer class="beautiful-footer">
+    
+    <div class="container">
+
+        <div class="footer-main">
+            <!-- ستون ۱: درباره ما -->
+            <div class="footer-column">
+                <h3 class="footer-title">
+                    <span class="footer-icon">🎨</span>
+                    Art Vision
+                </h3>
+                <p class="footer-description">
+                    پلتفرم هنری برای نمایش آثار هنرمندان ایرانی و بین‌المللی. 
+                    جایی که هنر دیجیتال زنده می‌شود و ایده‌ها شکل می‌گیرند.
+                </p>
+
+            </div>
+            
+            <!-- ستون ۲: لینک‌های سریع -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">لینک‌های سریع</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">صفحه اصلی</a></li>
+                    <li><a href="archive-art.html" class="footer-link">گالری آثار</a></li>
+                    <li><a href="archive-blog.html" class="footer-link"> بلاگ ها</a></li>
+                </ul>
+            </div>
+            
+            <!-- ستون ۳: اطلاعات مهم -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">اطلاعات مهم</h4>
+                <ul class="footer-links">
+                    <li><a href="rules.html" class="footer-link">مقررات و قوانین</a></li>
+                    <li><a href="faq.html" class="footer-link">سوالات متداول</a></li>
+                    <li><a href="contact-us.html" class="footer-link"> تماس با ما</a></li>
+                    <li><a href="about-us.html" class="footer-link"> درباره ما</a></li>
+                </ul>
+            </div>
+            
+            <!-- ستون ۴: خبرنامه -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">عضویت در خبرنامه</h4>
+                <p class="newsletter-text">
+                    از جدیدترین آثار و نمایشگاه‌ها مطلع شوید
+                </p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="ایمیل خود را وارد کنید" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-btn">
+                        <span class="btn-icon"></span>
+                        عضویت
+                    </button>
+                </form>
+         
+            </div>
+        </div>
+       
+        
+        <!-- کپی رایت -->
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>© 2025 Art Vision. تمامی حقوق محفوظ است.</p>
+                <p class="made-with">
+                    ساخته شده با <span class="heart">❤️</span> برای جامعه هنری
+                </p>
+            </div>
+            <div class="footer-badges">
+                <span class="badge">هنر دیجیتال</span>
+                <span class="badge">تایید شده</span>
+                <span class="badge">امن</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- اسکریپت بوت استرپ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

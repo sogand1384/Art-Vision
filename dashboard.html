@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل کاربری هنرمند</title>
+    <!-- بوت استرپ 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css"
+
+      
+
+</head>
+<body>
+    <!-- نوار کناری -->
+    <div class="sidebar-toggle" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </div>
+    
+    <div class="sidebar" id="sidebar">
+        <a href="#" class="logo" style="font-size: 1.2rem;">گالری هنری</a>
+        
+        <ul class="sidebar-menu">
+            <li><a href="#" class="active"><i class="fas fa-home"></i> داشبورد</a></li>
+            <li><a href="#"><i class="fas fa-palette"></i> آثار هنری</a></li>
+            <li><a href="#"><i class="fas fa-store"></i> فروشگاه</a></li>
+            <li><a href="#"><i class="fas fa-calendar-alt"></i> رویدادها</a></li>
+            <li><a href="#"><i class="fas fa-chart-line"></i> آمارها</a></li>
+            <li><a href="#"><i class="fas fa-users"></i> دنبال‌کنندگان</a></li>
+            <li><a href="#"><i class="fas fa-wallet"></i> درآمدها</a></li>
+            <li><a href="#"><i class="fas fa-cog"></i> تنظیمات</a></li>
+        </ul>
+    </div>
+
+<!-- هدر -->
+<header class="simple-header">
+    <div class="container">
+        <nav class="navbar">
+            
+            <!-- دکمه منوی موبایل -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                ☰
+            </button>
+
+            <!-- منوی وسط -->
+            <div class="header-center">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="archive-art.html" class="nav-link">گالری</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="archive-blog.html" class="nav-link">بلاگ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about-us.html" class="nav-link">درباره ما</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact-us.html" class="nav-link">تماس با ما</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- دکمه‌های سمت چپ -->
+            <div class="header-left">
+                <a href="sinup.html"><button class="auth-btn login-btn">
+                    ورود
+                </button></a>
+                <a href="register.html"><button class="auth-btn signup-btn">
+                    ثبت نام
+                </button></a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+    <!-- داشبورد -->
+    <main class="dashboard-container">
+        <!-- هدر کاربر -->
+        <div class="user-header">
+            <div class="user-avatar">
+                <img src="img/zz.jpg" alt="هنرمند">
+            </div>
+            <div class="user-info">
+                <h1>سارا احمدی</h1>
+                <span class="user-badge">هنرمند نقاش حرفه‌ای</span>
+                <p style="color: rgba(255, 255, 255, 0.8);">نقاش معاصر با تخصص در هنر آبستره و مینیمال</p>
+                
+                <div class="user-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">۴۷</div>
+                        <div class="stat-label">اثر هنری</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">۱,۲۴۵</div>
+                        <div class="stat-label">دنبال‌کننده</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">۳۸</div>
+                        <div class="stat-label">رویداد</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">۱۲۵M</div>
+                        <div class="stat-label">درآمد (تومان)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- کارت‌های آمار -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>بازدید امروز</h3>
+                <div style="font-size: 2rem; color: #ffe1a8; font-weight: bold;">۸۵۶</div>
+                <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">+۱۲% نسبت به دیروز</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h3>فروش ماه</h3>
+                <div style="font-size: 2rem; color: #ffe1a8; font-weight: bold;">۱۲</div>
+                <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">+۳ اثر فروخته شده</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>لایک‌ها</h3>
+                <div style="font-size: 2rem; color: #ffe1a8; font-weight: bold;">۳,۴۵۶</div>
+                <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">+۲۳۴ این هفته</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-comment"></i>
+                </div>
+                <h3>نظرات جدید</h3>
+                <div style="font-size: 2rem; color: #ffe1a8; font-weight: bold;">۴۷</div>
+                <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">+۸ در ۲۴ ساعت گذشته</div>
+            </div>
+        </div>
+
+        <!-- بخش‌های اصلی -->
+        <div class="dashboard-sections">
+            <!-- آثار هنری اخیر -->
+            <div class="section-card">
+                <div class="section-header">
+                    <i class="fas fa-palette"></i>
+                    <h2>آثار هنری اخیر</h2>
+                </div>
+                
+                <div class="artworks-grid">
+                    <div class="artwork-item">
+                        <img src="img/q.jpg" alt="اثر ۱" class="artwork-img">
+                        <div class="artwork-info">
+                            <div class="artwork-title">طبیعت سکوت</div>
+                            <div class="artwork-price">۴۵,۰۰۰,۰۰۰ تومان</div>
+                        </div>
+                    </div>
+           
+                    
+                    <div class="artwork-item">
+                        <img src="img/photo.jpg" alt="اثر ۳" class="artwork-img">
+                        <div class="artwork-info">
+                            <div class="artwork-title">ابرهای رقصان</div>
+                            <div class="artwork-price">۲۸,۵۰۰,۰۰۰ تومان</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- رویدادهای آینده -->
+            <div class="section-card">
+                <div class="section-header">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h2>رویدادهای آینده</h2>
+                </div>
+                
+                <div class="events-list">
+                    <div class="event-item">
+                        <div class="event-date">۲۵ بهمن ۱۴۰۲ • ۱۷:۰۰</div>
+                        <div class="event-title">نمایشگاه انفرادی "نقش سکوت"</div>
+                        <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">گالری هنر معاصر تهران</div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">۳ اسفند ۱۴۰۲ • ۱۵:۳۰</div>
+                        <div class="event-title">ورکشاپ تکنیک‌های آبرنگ</div>
+                        <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">مرکز هنرهای تجسمی</div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">۱۲ اسفند ۱۴۰۲ • ۱۹:۰۰</div>
+                        <div class="event-title">میزگرد هنرمندان معاصر</div>
+                        <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">موزه هنرهای زیبا</div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">۲۰ اسفند ۱۴۰۲ • ۱۰:۰۰</div>
+                        <div class="event-title">حراج آثار هنری خیریه</div>
+                        <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">هتل اسپیناس پالاس</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- فعالیت‌های اخیر -->
+            <div class="section-card">
+                <div class="section-header">
+                    <i class="fas fa-history"></i>
+                    <h2>فعالیت‌های اخیر</h2>
+                </div>
+                
+                <div class="events-list">
+                    <div class="event-item">
+                        <div class="event-date">امروز • ۱۴:۳۰</div>
+                        <div class="event-title">اثر جدید "طلوع آبی" آپلود شد</div>
+                        <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">+۸۴ لایک و ۱۲ نظر</div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">دیروز • ۱۱:۲۰</div>
+                        <div class="event-title">"طبیعت سکوت" توسط علی رضایی خریداری شد</div>
+                        <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">+۴۵,۰۰۰,۰۰۰ تومان</div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">۲ روز پیش • ۱۶:۴۵</div>
+                        <div class="event-title">شما به رویداد "نمایشگاه بهاری" دعوت شدید</div>
+                        <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">گالری پردیس هنر</div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">۳ روز پیش • ۰۹:۱۵</div>
+                        <div class="event-title">۵۰ دنبال‌کننده جدید اضافه شدند</div>
+                        <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">حجم تعامل +۱۸٪</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- دکمه‌های اکشن -->
+        <div class="action-buttons">
+            <a href="new-art.html" style="text-decoration: none"><button class="action-btn">
+                <i class="fas fa-plus"></i>
+                افزودن اثر جدید
+            </button></a>
+            <a href="edit-pro.html" style="text-decoration: none"><button class="action-btn">
+                <i class="fas fa-edit"></i>
+                ویرایش پروفایل
+            </button></a>
+        </div>
+    </main>
+
+
+<footer class="beautiful-footer">
+    
+    <div class="container">
+
+        <div class="footer-main">
+            <!-- ستون ۱: درباره ما -->
+            <div class="footer-column">
+                <h3 class="footer-title">
+                    <span class="footer-icon">🎨</span>
+                    Art Vision
+                </h3>
+                <p class="footer-description">
+                    پلتفرم هنری برای نمایش آثار هنرمندان ایرانی و بین‌المللی. 
+                    جایی که هنر دیجیتال زنده می‌شود و ایده‌ها شکل می‌گیرند.
+                </p>
+
+            </div>
+            
+            <!-- ستون ۲: لینک‌های سریع -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">لینک‌های سریع</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">صفحه اصلی</a></li>
+                    <li><a href="archive-art.html" class="footer-link">گالری آثار</a></li>
+                    <li><a href="archive-blog.html" class="footer-link"> بلاگ ها</a></li>
+                </ul>
+            </div>
+            
+            <!-- ستون ۳: اطلاعات مهم -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">اطلاعات مهم</h4>
+                <ul class="footer-links">
+                    <li><a href="rules.html" class="footer-link">مقررات و قوانین</a></li>
+                    <li><a href="faq.html" class="footer-link">سوالات متداول</a></li>
+                    <li><a href="contact-us.html" class="footer-link"> تماس با ما</a></li>
+                    <li><a href="about-us.html" class="footer-link"> درباره ما</a></li>
+                </ul>
+            </div>
+            
+            <!-- ستون ۴: خبرنامه -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">عضویت در خبرنامه</h4>
+                <p class="newsletter-text">
+                    از جدیدترین آثار و نمایشگاه‌ها مطلع شوید
+                </p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="ایمیل خود را وارد کنید" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-btn">
+                        <span class="btn-icon"></span>
+                        عضویت
+                    </button>
+                </form>
+         
+            </div>
+        </div>
+       
+        
+        <!-- کپی رایت -->
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>© 2025 Art Vision. تمامی حقوق محفوظ است.</p>
+                <p class="made-with">
+                    ساخته شده با <span class="heart">❤️</span> برای جامعه هنری
+                </p>
+            </div>
+            <div class="footer-badges">
+                <span class="badge">هنر دیجیتال</span>
+                <span class="badge">تایید شده</span>
+                <span class="badge">امن</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلوع در کوهستان - سارا احمدی | گالری نقاشی</title>
+    <!-- بوت استرپ 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- فونت آیکون -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+ <!-- هدر -->
+<header class="simple-header">
+    <div class="container">
+        <nav class="navbar">
+
+            
+            <!-- دکمه منوی موبایل -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                ☰
+            </button>
+            <!-- منوی وسط -->
+            <div class="header-center">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="archive-art.html" class="nav-link">گالری</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="archive-blog.html" class="nav-link">بلاگ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about-us.html" class="nav-link">درباره ما</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact-us.html" class="nav-link">تماس با ما</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- دکمه‌های سمت چپ -->
+            <div class="header-left">
+                <a href="sinup.html"><button class="auth-btn login-btn">
+                    ورود
+                </button></a>
+                <a href="register.html"><button class="auth-btn signup-btn">
+                    ثبت نام
+                </button></a>
+            </div>
+
+        </nav>
+    </div>
+</header>
+
+    <!-- محتوای اصلی -->
+    <main class="container">
+
+        <div class="artgal-artwork-main">
+            <div class="row">
+                <!-- گالری تصویر -->
+                <div class="col-lg-7">
+                    <div class="artgal-artwork-gallery">
+                        <img src="img/q.jpg" 
+                             alt="طلوع در چمنزار" class="artgal-main-image" id="artgalMainImage">
+                        
+                        <div class="artgal-gallery-controls">
+                            <button class="artgal-gallery-btn" onclick="artgalZoomIn()">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="artgal-gallery-btn" onclick="artgalZoomOut()">
+                                <i class="fas fa-search-minus"></i>
+                            </button>
+                            <button class="artgal-gallery-btn" onclick="artgalFullscreen()">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- گالری کوچک -->
+                    <div class="artgal-thumbnail-gallery">
+                        <img src="img/q.jpg" 
+                             alt="نمای کلی" class="artgal-thumbnail active" onclick="artgalChangeImage(this, 'main')">
+                        <img src="img/brush.jpg" 
+                             alt="جزئیات قلم مو" class="artgal-thumbnail" onclick="artgalChangeImage(this, 'detail1')">
+                        <img src="img/frame.jpg" 
+                             alt="قاب اثر" class="artgal-thumbnail" onclick="artgalChangeImage(this, 'detail2')">
+                        <img src="img/sign.jpg" 
+                             alt="امضای هنرمند" class="artgal-thumbnail" onclick="artgalChangeImage(this, 'signature')">
+                    </div>
+
+                    <!-- توضیحات هنرمند -->
+                    <div class="artgal-artist-description">
+                        <h3 class="artgal-section-title">
+                            <i class="fas fa-quote-right"></i>
+                            از زبان هنرمند
+                        </h3>
+                        <p class="artgal-artist-quote">
+                            چشم که بسته می‌شود، جنگل آغاز می‌شود. من فقط این سبزیِ سرکش را رها کردم روی بوم... گویی خود درختان، ریشه‌هایشان را در رنگ‌ها فرو بردند و بر خاک کرباس، جوانه زدند.
+                        </p>
+                        <div class="artgal-artist-signature">
+                            <img src="img/zz.jpg" 
+                                 alt="سارا احمدی" class="artgal-artist-avatar">
+                            <div class="artgal-artist-info">
+                                <h5>سارا احمدی</h5>
+                                <p>نقاش امپرسیونیست | ۸ سال تجربه</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- اطلاعات و خرید -->
+                <div class="col-lg-5">
+                    <div class="artgal-artwork-info">
+                        <!-- عنوان و هنرمند -->
+                        <div class="artgal-info-section">
+                            <h1 class="artgal-section-title">طلوع در چمنزار</h1>
+                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                                <img src="img/zz.jpg" 
+                                     alt="سارا احمدی" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid rgba(255, 225, 168, 0.3);">
+                                <div>
+                                    <h4 style="color: #ffe1a8; margin: 0; font-size: 1.3rem;">سارا احمدی</h4>
+                                    <p style="color: rgba(255, 255, 255, 0.7); margin: 5px 0 0; font-size: 0.9rem;">نقاش امپرسیونیست</p>
+                                </div>
+                            </div>
+                            <div class="artgal-interactive-buttons">
+                                <button class="artgal-interactive-btn" onclick="artgalToggleLike()" id="artgalLikeBtn">
+                                    <i class="far fa-heart"></i>
+                                    <span id="artgalLikeCount">۴۵۲</span> لایک
+                                </button>
+                                <button class="artgal-interactive-btn" onclick="artgalToggleSave()" id="artgalSaveBtn">
+                                    <i class="far fa-bookmark"></i>
+                                    ذخیره
+                                </button>
+                                <button class="artgal-interactive-btn" onclick="artgalShare()">
+                                    <i class="fas fa-share-alt"></i>
+                                    اشتراک
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- قیمت و تخفیف -->
+                        <div class="artgal-info-section">
+                            <div class="artgal-price-section">
+                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                    <span class="artgal-discount">۲۰٪ تخفیف</span>
+                                    <span class="artgal-original-price">۵۶,۰۰۰,۰۰۰ تومان</span>
+                                </div>
+                                <div class="artgal-price">۴۴,۸۰۰,۰۰۰ تومان</div>
+                                <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; margin-bottom: 25px;">
+                                    قیمت نهایی با احتساب مالیات و هزینه بسته‌بندی
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- دکمه‌های خرید -->
+                        <div class="artgal-info-section">
+                            <a href="buy.html" style="text-decoration: none"><button class="artgal-action-btn artgal-buy-btn" id="artgalAddToCartBtn">
+                                افزودن به سبد خرید
+                            </button></a>
+
+                            <button class="artgal-action-btn artgal-wishlist-btn" onclick="artgalAddToWishlist()">
+                                
+                                افزودن به علاقه‌مندی‌ها
+                            </button>
+                        </div>
+
+                        <!-- جزئیات اثر -->
+                        <div class="artgal-info-section">
+                            <h3 class="artgal-section-title">
+                                <i class="fas fa-info-circle"></i>
+                                مشخصات اثر
+                            </h3>
+                            <div class="artgal-details-grid">
+                                <div class="artgal-detail-item">
+                                    <span class="artgal-detail-label">سبک</span>
+                                    <span class="artgal-detail-value">امپرسیونیسم</span>
+                                </div>
+                                <div class="artgal-detail-item">
+                                    <span class="artgal-detail-label">تکنیک</span>
+                                    <span class="artgal-detail-value">رنگ روغن روی بوم</span>
+                                </div>
+                                <div class="artgal-detail-item">
+                                    <span class="artgal-detail-label">سال خلق</span>
+                                    <span class="artgal-detail-value">۱۴۰۲</span>
+                                </div>
+                                <div class="artgal-detail-item">
+                                    <span class="artgal-detail-label">ابعاد</span>
+                                    <span class="artgal-detail-value">۸۰ × ۱۲۰ سانتی‌متر</span>
+                                </div>
+                                <div class="artgal-detail-item">
+                                    <span class="artgal-detail-label">وضعیت</span>
+                                    <span class="artgal-detail-value" style="color: #4CAF50;">موجود در انبار</span>
+                                </div>
+                                <div class="artgal-detail-item">
+                                    <span class="artgal-detail-label">امضا</span>
+                                    <span class="artgal-detail-value">دارد (پشت اثر)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- اطلاعات تحویل -->
+                        <div class="artgal-delivery-info">
+                            <i class="fas fa-shipping-fast artgal-delivery-icon"></i>
+                            <div>
+                                <h5 style="color: #ffe1a8; margin: 0 0 8px; font-size: 1.1rem;">تحویل سریع و امن</h5>
+                                <p style="color: rgba(255, 255, 255, 0.7); margin: 0; font-size: 0.9rem;">
+                                    تحویل در تهران ۲۴ ساعت، سایر شهرها ۳-۵ روز کاری
+                                </p>
+                                <p style="color: rgba(255, 225, 168, 0.8); margin: 5px 0 0; font-size: 0.9rem;">
+                                    <i class="fas fa-shield-alt me-2"></i>
+                                    گارانتی بازگشت ۷ روزه
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- اطلاعات فنی -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="artgal-artwork-info">
+                        <h3 class="artgal-section-title">
+                            <i class="fas fa-clipboard-list"></i>
+                            اطلاعات فنی اثر
+                        </h3>
+                        <table class="artgal-specs-table">
+                            <tr>
+                                <td>جنس بوم</td>
+                                <td>کتان با کیفیت موزه‌ای (۳۰۰ گرم)</td>
+                            </tr>
+                            <tr>
+                                <td>نوع رنگ</td>
+                                <td>رنگ روغن هنری با کیفیت عالی (Winsor & Newton)</td>
+                            </tr>
+                            <tr>
+                                <td>زمان خلق</td>
+                                <td>۴۵ روز (کار مداوم)</td>
+                            </tr>
+                            <tr>
+                                <td>محل خلق</td>
+                                <td>آتلیه شخصی هنرمند در تهران</td>
+                            </tr>
+                            <tr>
+                                <td>تعداد لایه رنگ</td>
+                                <td>۷ لایه اصلی + ۳ لایه وارنیش نهایی</td>
+                            </tr>
+                            <tr>
+                                <td>گواهی اصالت</td>
+                                <td>دارد (شماره ثبت: ART-2023-0876)</td>
+                            </tr>
+                            <tr>
+                                <td>قاب پیشنهادی</td>
+                                <td>قاب چوبی طبیعی با پوشش ضد UV (ارائه می‌شود)</td>
+                            </tr>
+                            <tr>
+                                <td>شرایط نگهداری</td>
+                                <td>دور از نور مستقیم خورشید، رطوبت ۴۰-۶۰٪، دمای ۱۸-۲۲ درجه</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+      </main>
+
+
+
+
+
+<footer class="beautiful-footer">
+    
+    <div class="container">
+
+        <div class="footer-main">
+            <!-- ستون ۱: درباره ما -->
+            <div class="footer-column">
+                <h3 class="footer-title">
+                    <span class="footer-icon">🎨</span>
+                    Art Vision
+                </h3>
+                <p class="footer-description">
+                    پلتفرم هنری برای نمایش آثار هنرمندان ایرانی و بین‌المللی. 
+                    جایی که هنر دیجیتال زنده می‌شود و ایده‌ها شکل می‌گیرند.
+                </p>
+
+            </div>
+            
+            <!-- ستون ۲: لینک‌های سریع -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">لینک‌های سریع</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">صفحه اصلی</a></li>
+                    <li><a href="archive-art.html" class="footer-link">گالری آثار</a></li>
+                    <li><a href="archive-blog.html" class="footer-link"> بلاگ ها</a></li>
+                </ul>
+            </div>
+            
+            <!-- ستون ۳: اطلاعات مهم -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">اطلاعات مهم</h4>
+                <ul class="footer-links">
+                    <li><a href="rules.html" class="footer-link">مقررات و قوانین</a></li>
+                    <li><a href="faq.html" class="footer-link">سوالات متداول</a></li>
+                    <li><a href="contact-us.html" class="footer-link"> تماس با ما</a></li>
+                    <li><a href="about-us.html" class="footer-link"> درباره ما</a></li>
+                </ul>
+            </div>
+            
+            <!-- ستون ۴: خبرنامه -->
+            <div class="footer-column">
+                <h4 class="footer-subtitle">عضویت در خبرنامه</h4>
+                <p class="newsletter-text">
+                    از جدیدترین آثار و نمایشگاه‌ها مطلع شوید
+                </p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="ایمیل خود را وارد کنید" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-btn">
+                        <span class="btn-icon"></span>
+                        عضویت
+                    </button>
+                </form>
+         
+            </div>
+        </div>
+       
+        
+        <!-- کپی رایت -->
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>© 2025 Art Vision. تمامی حقوق محفوظ است.</p>
+                <p class="made-with">
+                    ساخته شده با <span class="heart">❤️</span> برای جامعه هنری
+                </p>
+            </div>
+            <div class="footer-badges">
+                <span class="badge">هنر دیجیتال</span>
+                <span class="badge">تایید شده</span>
+                <span class="badge">امن</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- اسکریپت بوت استرپ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
