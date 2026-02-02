@@ -1,6 +1,4 @@
 
-
-
 // مدیریت هدر
 document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('.simple-header');
@@ -127,28 +125,6 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(number);
     });
 });
- // دریافت المان دکمه
-        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-        
-        // هنگامی که کاربر اسکرول می‌کند، وضعیت دکمه را بررسی کن
-        window.addEventListener("scroll", function() {
-            // اگر کاربر به اندازه 300px پایین رفته باشد، دکمه را نشان بده
-            if (window.pageYOffset > 300) {
-                scrollToTopBtn.classList.add("show");
-            } else {
-                scrollToTopBtn.classList.remove("show");
-            }
-        });
-        
-        // وقتی کاربر روی دکمه کلیک می‌کند، به بالای صفحه برو
-        scrollToTopBtn.addEventListener("click", function() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-
-
 
 
 
@@ -291,23 +267,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function renderLatestBlogs() {
         const container = document.getElementById('latestBlogsContainer');
         
-        // فقط ۳ بلاگ اول را نمایش می‌دهیم
-        const blogsToShow = latestBlogs.slice(0, 3);
-        
-        blogsToShow.forEach((blog, index) => {
-            const blogCard = createBlogCard(blog);
-            container.innerHTML += blogCard;
-            
-            // انیمیشن با تأخیر
-            const cards = container.querySelectorAll('.blog-card');
-            setTimeout(() => {
-                if (cards[index]) {
-                    cards[index].style.animationDelay = `${index * 0.2}s`;
-                    cards[index].style.opacity = '1';
-                }
-            }, 100);
-        });
-    }
+
 
     // تابع اسلایدر بلاگ‌ها (اختیاری)
     function initBlogSlider() {
@@ -324,26 +284,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        // دکمه‌های ناوبری
-        const nextBtn = document.querySelector('.slider-arrow.next');
-        const prevBtn = document.querySelector('.slider-arrow.prev');
-        
-        if (nextBtn && prevBtn) {
-            nextBtn.addEventListener('click', () => {
-                if (currentIndex + slidesToShow < latestBlogs.length) {
-                    currentIndex++;
-                    updateSlider();
-                }
-            });
-            
-            prevBtn.addEventListener('click', () => {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    updateSlider();
-                }
-            });
-        }
-    }
+
 
     // اجرا پس از لود صفحه
     document.addEventListener('DOMContentLoaded', function() {
@@ -391,3 +332,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 100);
         });
     }
+
+
+
+

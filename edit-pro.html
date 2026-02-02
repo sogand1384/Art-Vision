@@ -13,49 +13,66 @@
 </head>
 <body class="bodyEdit">
  
+  
 <!-- هدر -->
-<header class="simple-header">
+<header class="head">
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
-        <nav class="navbar">
-            
-            <!-- دکمه منوی موبایل -->
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                ☰
-            </button>
 
-            <!-- منوی وسط -->
-            <div class="header-center">
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">خانه</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="archive-art.html" class="nav-link">گالری</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="archive-blog.html" class="nav-link">بلاگ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="about-us.html" class="nav-link">درباره ما</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contact-us.html" class="nav-link">تماس با ما</a>
-                    </li>
-                </ul>
-            </div>
-            
-            <!-- دکمه‌های سمت چپ -->
-            <div class="header-left">
-                <a href="sinup.html"><button class="auth-btn login-btn">
-                    ورود
-                </button></a>
-                <a href="register.html"><button class="auth-btn signup-btn">
-                    ثبت نام
-                </button></a>
-            </div>
-        </nav>
+
+      <!-- دکمه منوی موبایل -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- منوی اصلی -->
+      <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+
+        <!-- منوی وسط -->
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">خانه</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="archive-art.html">گالری</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Tour.html">تور هنری</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about-us.html">درباره ما</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact-us.html">تماس با ما</a>
+          </li>
+        </ul>
+
+      </div>
+
+
+      <div class="d-flex gap-2">
+        <a href="sinup.html" class="btn btn-outline-primary experience-btn">
+          ورود
+        </a>
+        <a href="register.html" class="btn btn-primary experience-btn">
+          ثبت نام
+        </a>
+      </div>
+
     </div>
+  </nav>
 </header>
+
+
+
 
     <!-- صفحه ویرایش پروفایل -->
     <main class="profile-edit-container">

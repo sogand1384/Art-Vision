@@ -8,47 +8,8 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- هدر -->
-    <header class="simple-header">
-        <div class="container">
-            <nav class="navbar">
-                <!-- دکمه منوی موبایل -->
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    ☰
-                </button>
-                <!-- منوی وسط -->
-                <div class="header-center">
-                    <ul class="nav-menu">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-link">خانه</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="archive-art.html" class="nav-link">گالری</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="archive-blog.html" class="nav-link active">بلاگ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="about-us.html" class="nav-link">درباره ما</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="contact-us.html" class="nav-link">تماس با ما</a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- دکمه‌های سمت چپ -->
-                <div class="header-left">
-                   <a href="sinup.html"> <button class="auth-btn login-btn">
-                        ورود
-                    </button></a>
-                    <a href="register.html"><button class="auth-btn signup-btn">
-                        ثبت نام
-                    </button></a>
-                </div>
-            </nav>
-        </div>
-    </header>
+
+
 
     <!-- بخش هیرو بلاگ -->
     <section class="blog-hero">
@@ -80,176 +41,101 @@
         </div>
     </div>
 
-    <!-- شبکه کارت‌های بلاگ -->
-    <div class="blog-grid">
-        <!-- کارت 1 -->
-        <article class="blog-card">
-            <div class="blog-card-image">
-                <img src="img/draw.jpg" alt="تکنیک‌های نقاشی مدرن">
-                <span class="blog-category">نقاشی مدرن</span>
-            </div>
-            <div class="blog-card-content">
-                <div class="blog-date">
-                    <i class="far fa-calendar"></i>
-                    ۲۵ خرداد ۱۴۰۳
-                </div>
-                <h3 class="blog-title">بررسی تکنیک‌های نوین در نقاشی آبستره</h3>
-                <p class="blog-excerpt">
-                    در این مقاله به بررسی جدیدترین تکنیک‌های نقاشی آبستره  می‌پردازیم.
-                </p>
-                <div class="blog-author">
-                    <div class="author-avatar">
-                        <img src="img/mmm.jpg" alt="نویسنده">
-                    </div>
-                    <div class="author-name">علی رضایی</div>
-                </div>
-                <a href="single-blog.html" class="blog-read-more">
-                    ادامه مطلب
-                    <i class="fas fa-arrow-left"></i>
-                </a>
-            </div>
-        </article>
+   <section class="blog-section">
+        <div class="section-header">
 
-        <!-- کارت 2 -->
-        <article class="blog-card">
-            <div class="blog-card-image">
-                <img src="img/sculp.jpg" alt="مجسمه‌سازی معاصر">
-                <span class="blog-category">مجسمه‌سازی</span>
-            </div>
-            <div class="blog-card-content">
-                <div class="blog-date">
-                    <i class="far fa-calendar"></i>
-                    ۱۸ خرداد ۱۴۰۳
-                </div>
-                <h3 class="blog-title">تحول مجسمه‌سازی در قرن بیست و یکم</h3>
-                <p class="blog-excerpt">
-                    بررسی استفاده از مواد جدید و تکنولوژی‌های دیجیتال در خلق آثار مجسمه‌سازی معاصر.
-                </p>
-                <div class="blog-author">
-                    <div class="author-avatar">
-                        <img src="img/z.jpg" alt="نویسنده">
-                    </div>
-                    <div class="author-name">سارا محمدی</div>
-                </div>
-                <a href="single-blog.html" class="blog-read-more">
-                    ادامه مطلب
-                    <i class="fas fa-arrow-left"></i>
-                </a>
-            </div>
-        </article>
+            <p class="section-subtitle">کاوش در دنیای هنر دیجیتال، تکنیک‌های نوین و الهام‌بخش‌ترین آثار هنرمندان معاصر</p>
+        </div>
 
-        <!-- کارت 3 -->
-        <article class="blog-card">
-            <div class="blog-card-image">
-                <img src="img/ax.jpg" alt="عکاسی مفهومی">
-                <span class="blog-category">عکاسی هنری</span>
-            </div>
-            <div class="blog-card-content">
-                <div class="blog-date">
-                    <i class="far fa-calendar"></i>
-                    ۱۲ خرداد ۱۴۰۳
-                </div>
-                <h3 class="blog-title">عکاسی مفهومی: داستان‌گویی با تصویر</h3>
-                <p class="blog-excerpt">
-                    چگونه می‌توان با عکاسی مفهومی پیام‌های عمیق و داستان‌های شخصی را به تصویر کشید؟
-                </p>
-                <div class="blog-author">
-                    <div class="author-avatar">
-                        <img src="img/mm.jpg" alt="نویسنده">
+        <div class="blog-container">
+            <!-- کارت اول -->
+            <div class="art-blog-card">
+                <div class="blog-image-wrapper">
+                    <span class="category-badge">هنر دیجیتال</span>
+                    <div class="blog-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>۱۵ تیر ۱۴۰۳</span>
                     </div>
-                    <div class="author-name">مهدی کریمی</div>
+                    <img src="img/11.jpg" alt="هنر دیجیتال" class="blog-image">
                 </div>
-                <a href="single-blog.html" class="blog-read-more">
-                    ادامه مطلب
-                    <i class="fas fa-arrow-left"></i>
-                </a>
+                <div class="blog-content">
+                    <h3 class="blog-title">انقلاب هنر دیجیتال: از تصویرسازی تا واقعیت مجازی</h3>
+                    <p class="blog-excerpt">کاوش در تحول هنر دیجیتال و تأثیر آن بر خلق آثار هنری معاصر. بررسی تکنیک‌های نوین و ابزارهای پیشرفته که مرزهای خلاقیت را جابه‌جا کرده‌اند و هنرمندان را قادر می‌سازند تا ایده‌های پیچیده خود را به واقعیت تبدیل کنند.</p>
+                    
+                    <div class="blog-meta">
+                                                <div class="read-time">
+                            <i class="far fa-clock"></i>
+                            <span>۶ دقیقه</span>
+                        </div>
+                    </div>
+                    
+                    <a href="single-blog.html"><button class="read-more">
+                        <span>مطالعه مقاله</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </button></a>
+                </div>
             </div>
-        </article>
 
-        <!-- کارت 4 -->
-        <article class="blog-card">
-            <div class="blog-card-image">
-                <img src="img/port.jpg" alt="آموزش طراحی">
-                <span class="blog-category">تکنیک‌های طراحی</span>
-            </div>
-            <div class="blog-card-content">
-                <div class="blog-date">
-                    <i class="far fa-calendar"></i>
-                    ۵ خرداد ۱۴۰۳
-                </div>
-                <h3 class="blog-title">۱۰ تکنیک برتر برای طراحی پرتره واقع‌گرایانه</h3>
-                <p class="blog-excerpt">
-                    از سایه‌زنی تا تنالیته، در این مقاله بهترین تکنیک‌های طراحی پرتره را به شما آموزش می‌دهیم.
-                </p>
-                <div class="blog-author">
-                    <div class="author-avatar">
-                        <img src="img/mmm.jpg" alt="نویسنده">
+            <!-- کارت دوم -->
+            <div class="art-blog-card">
+                <div class="blog-image-wrapper">
+                    <span class="category-badge">NFT و هنر</span>
+                    <div class="blog-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>۸ تیر ۱۴۰۳</span>
                     </div>
-                    <div class="author-name">رضا نوروزی</div>
+                    <img src="img/12.jpg" alt="NFT و هنر" class="blog-image">
                 </div>
-                <a href="single-blog.html" class="blog-read-more">
-                    ادامه مطلب
-                    <i class="fas fa-arrow-left"></i>
-                </a>
+                <div class="blog-content">
+                    <h3 class="blog-title">NFT چگونه بازار هنر را متحول کرد؟</h3>
+                    <p class="blog-excerpt">بررسی تأثیر توکن‌های غیرمثلی (NFT) بر اقتصاد هنر و ایجاد فرصت‌های جدید برای هنرمندان دیجیتال. تحلیل موفقیت‌های بزرگ و چالش‌های پیش‌رو در این حوزه نوظهور که در حال تغییر تعاریف مالکیت هنری است.</p>
+                    
+                    <div class="blog-meta">
+                                               <div class="read-time">
+                            <i class="far fa-clock"></i>
+                            <span>۸ دقیقه</span>
+                        </div>
+                    </div>
+                    
+                    <a href="single-blog.html"><button class="read-more">
+                        <span>مطالعه مقاله</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </button></a>
+                </div>
             </div>
-        </article>
 
-        <!-- کارت 5 -->
-        <article class="blog-card">
-            <div class="blog-card-image">
-                <img src="img/frida.jpg" alt="تحلیل آثار">
-                <span class="blog-category">تحلیل آثار</span>
-            </div>
-            <div class="blog-card-content">
-                <div class="blog-date">
-                    <i class="far fa-calendar"></i>
-                    ۲۸ اردیبهشت ۱۴۰۳
-                </div>
-                <h3 class="blog-title">تحلیل نمادگرایی در آثار فریدا کالو به همراه نمایش آثار</h3>
-                <p class="blog-card-excerpt">
-                    بررسی نمادها و المان‌های به کار رفته در آثار فریدا کالو و ارتباط آن‌ها با زندگی شخصی این هنرمند.
-                </p>
-                <div class="blog-author">
-                    <div class="author-avatar">
-                        <img src="img/zz.jpg" alt="نویسنده">
+            <!-- کارت سوم -->
+            <div class="art-blog-card">
+                <div class="blog-image-wrapper">
+                    <span class="category-badge">تکنیک‌های پیشرفته</span>
+                    <div class="blog-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>۱ تیر ۱۴۰۳</span>
                     </div>
-                    <div class="author-name">فاطمه احمدی</div>
+                    <img src="img/15.jpg" alt="تکنیک‌های پیشرفته" class="blog-image">
                 </div>
-                <a href="single-blog.html" class="blog-read-more">
-                    ادامه مطلب
-                    <i class="fas fa-arrow-left"></i>
-                </a>
+                <div class="blog-content">
+                    <h3 class="blog-title">رندرینگ سه‌بعدی در هنر معاصر: راهنمای جامع</h3>
+                    <p class="blog-excerpt">مراحل خلق آثار هنری سه‌بعدی حرفه‌ای از ایده‌پردازی تا رندر نهایی. معرفی نرم‌افزارها و پلاگین‌های ضروری برای هنرمندان دیجیتال که به دنبال خلق آثار واقع‌گرایانه و تأثیرگذار هستند.</p>
+                    
+                    <div class="blog-meta">
+   
+                        <div class="read-time">
+                            <i class="far fa-clock"></i>
+                            <span>۱۰ دقیقه</span>
+                        </div>
+                    </div>
+                    
+                    <a href="single-blog.html"><button class="read-more">
+                        <span>مطالعه مقاله</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </button></a>
+                </div>
             </div>
-        </article>
+        </div>
 
-        <!-- کارت 6 -->
-        <article class="blog-card">
-            <div class="blog-card-image">
-                <img src="img/b.jpg" alt="نمایشگاه هنری">
-                <span class="blog-category">نمایشگاه‌ها</span>
-            </div>
-            <div class="blog-card-content">
-                <div class="blog-date">
-                    <i class="far fa-calendar"></i>
-                    ۲۰ اردیبهشت ۱۴۰۳
-                </div>
-                <h3 class="blog-title">گزارش نمایشگاه بین‌المللی هنر معاصر تهران ۱۴۰۳</h3>
-                <p class="blog-excerpt">
-                    گزارشی کامل از آثار برجسته، هنرمندان حاضر و رویدادهای جانبی نمایشگاه بین‌المللی هنر معاصر.
-                </p>
-                <div class="blog-author">
-                    <div class="author-avatar">
-                        <img src="img/mm.jpg" alt="نویسنده">
-                    </div>
-                    <div class="author-name">امیر حسینی</div>
-                </div>
-                <a href="single-blog.html" class="blog-read-more">
-                    ادامه مطلب
-                    <i class="fas fa-arrow-left"></i>
-                </a>
-            </div>
-        </article>
-    </div>
+           </section>
+
 
    
 
@@ -328,7 +214,5 @@
         </div>
     </div>
 </footer>
-
-    <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,107 +1,150 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
+<meta name="viewport" content="width-device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <title>Art Vision</title>
 
-
     <link rel="stylesheet" href="css/bootstrap.min.css">
-
   
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- هدر -->
-    <header class="simple-header">
-        <div class="container">
-            <nav class="navbar">
-                <!-- دکمه منوی موبایل -->
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    ☰
-                </button>
-                <!-- منوی وسط -->
-                <div class="header-center">
-                    <ul class="nav-menu">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-link">خانه</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="archive-art.html" class="nav-link">گالری</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="archive-blog.html" class="nav-link">بلاگ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="about-us.html" class="nav-link">درباره ما</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="contact-us.html" class="nav-link">تماس با ما</a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- دکمه‌های سمت چپ -->
-                <div class="header-left">
-                   <a href="sinup.html"> <button class="auth-btn login-btn">
-                        ورود
-                    </button></a>
-                    <a href="register.html"><button class="auth-btn signup-btn">
-                        ثبت نام
-                    </button></a>
-                </div>
-            </nav>
-        </div>
-    </header>
 
-<!-- Hero Section -->
-<section class="gallery-hero-section">
-    <div class="gallery-container">
+<div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+        <!-- لوگو یا آیکون -->
+        <div class="loader-logo">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M40 10C53.2548 10 64 20.7452 64 34C64 47.2548 53.2548 58 40 58C26.7452 58 16 47.2548 16 34C16 20.7452 26.7452 10 40 10Z" 
+                      stroke="#FFE1A8" stroke-width="4" stroke-linecap="round"/>
+                <path d="M40 22L46 34H34L40 22Z" fill="#FFE1A8"/>
+                <circle cx="40" cy="34" r="6" fill="#6F1D1B"/>
+            </svg>
+        </div>
         
-        <!-- دکمه قبلی -->
-        <button class="nav-btn prev-btn" onclick="prevSlide()" aria-label="اسلاید قبلی">❮</button>
-
-        <!-- گالری -->
-        <div class="gallery-wrapper" id="gallery">
-            <div class="gallery-item active">
-                <img src="img/f.jpg" alt="جنگل" loading="lazy">
-                <div class="image-caption">جنگل سرسبز</div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/c.jpg" alt="آبشار" loading="lazy">
-                <div class="image-caption">آبشار خروشان</div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/h.jpg" alt="کوهستان" loading="lazy">
-                <div class="image-caption">کوهستان برفی</div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/e.jpg" alt="دریاچه" loading="lazy">
-                <div class="image-caption">دریاچه آرام</div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/g.jpg" alt="غروب آفتاب" loading="lazy">
-                <div class="image-caption">غروب خورشید</div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/d.jpg" alt="صحرا" loading="lazy">
-                <div class="image-caption">صحرای طلایی</div>
-            </div>
+        <!-- متن لودینگ -->
+        <h2 class="loader-text">آرت ویژن</h2>
+        <p class="loader-subtext">در حال بارگذاری...</p>
+        
+        <!-- اسپینر -->
+        <div class="spinner">
+            <div class="spinner-circle"></div>
+            <div class="spinner-circle"></div>
+            <div class="spinner-circle"></div>
+            <div class="spinner-circle"></div>
         </div>
-
-        <!-- دکمه بعدی -->
-        <button class="nav-btn next-btn" onclick="nextSlide()" aria-label="اسلاید بعدی">❯</button>
-
-        <!-- نقاط ناوبری -->
-        <div class="dots-container">
-            <span class="dot active" onclick="goToSlide(0)" aria-label="برو به اسلاید ۱"></span>
-            <span class="dot" onclick="goToSlide(1)" aria-label="برو به اسلاید ۲"></span>
-            <span class="dot" onclick="goToSlide(2)" aria-label="برو به اسلاید ۳"></span>
-            <span class="dot" onclick="goToSlide(3)" aria-label="برو به اسلاید ۴"></span>
-            <span class="dot" onclick="goToSlide(4)" aria-label="برو به اسلاید ۵"></span>
-            <span class="dot" onclick="goToSlide(5)" aria-label="برو به اسلاید ۶"></span>
+        
+        <!-- نوار پیشرفت -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
         </div>
+        
+        <!-- درصد -->
+        <div class="progress-percent" id="progressPercent">0%</div>
     </div>
-</section>
+</div>
+
+
+
+
+
+
+
+<!-- هدر -->
+<header class="head">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+
+      <!-- دکمه منوی موبایل -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- منوی اصلی -->
+      <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+
+        <!-- منوی وسط -->
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">خانه</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="archive-art.html">گالری</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Tour.html">تور هنری</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about-us.html">درباره ما</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact-us.html">تماس با ما</a>
+          </li>
+        </ul>
+
+      </div>
+
+
+      <div class="d-flex gap-2">
+        <a href="sinup.html" class="btn btn-outline-primary experience-btn">
+          ورود
+        </a>
+        <a href="register.html" class="btn btn-primary experience-btn">
+          ثبت نام
+        </a>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+
+
+
+
+
+
+
+
+<div class="artx-coverflow">
+ 
+  <div class="artx-coverflow__scene">
+    <button class="artx-coverflow__nav artx-prev">‹</button>
+
+    <div class="artx-coverflow__track">
+      <div class="artx-coverflow__item" style="--i:-5; background-image:url('img/a.jpg')"></div>
+      <div class="artx-coverflow__item" style="--i:-4; background-image:url('img/12.jpg')"></div>
+      <div class="artx-coverflow__item" style="--i:-3; background-image:url('img/11.jpg')"></div>
+      <div class="artx-coverflow__item" style="--i:-2; background-image:url('img/ll.jpg')"></div>
+      <div class="artx-coverflow__item" style="--i:-1; background-image:url('img/h.jpg')"></div>
+
+      <div class="artx-coverflow__item artx-active" style="--i:0; background-image:url('img/k.jpg')"></div>
+
+      <div class="artx-coverflow__item" style="--i:1; background-image:url('img/c.jpg')"></div>
+      <div class="artx-coverflow__item" style="--i:2; background-image:url('img/d.jpg')"></div>
+      <div class="artx-coverflow__item" style="--i:3; background-image:url('img/18.jpg')"></div>
+      <div class="artx-coverflow__item" style="--i:4; background-image:url('img/q.jpg')"></div>
+    </div>
+
+    <button class="artx-coverflow__nav artx-next">›</button>
+  </div>
+</div>
+
+
+
+
 
 
 
@@ -164,40 +207,186 @@
 
 
 
-<!-- بخش جدیدترین بلاگ‌ها -->
-<section class="latest-blogs py-5" style="background: rgba(37, 9, 2, 0.95);">
-    <div class="container">
-        <!-- هدر بخش -->
-        <div class="row mb-5">
-            <div class="col-12">
-                <div class="section-header text-center">
-                    <h2 class="section-title mb-3" style="color: #ffe1a8; font-size: 2.2rem;">
-                        جدیدترین مقالات
-                    </h2>
-                    <p class="section-subtitle text-white-50" style="font-size: 1.1rem;">
-                        تازه‌ترین مطالب و آموزش‌های تخصصی در زمینه هنر و طراحی
-                    </p>
+
+
+<section id="main">
+
+
+<div class="items">
+
+<div class="item intro span-2">
+									<h1>چشم اندازی از آثار</h1>
+									<p>بخشی از آثار<br />
+									هنرمندان آرت ویژن</p>
+								</div>
+
+								<article class="item thumb span-1">
+									
+									<a href="img/10.jpg" class="image"><img src="img/10.jpg" alt=""></a>
+								</article>
+
+								<article class="item thumb span-2">
+																		<a href="img/11.jpg" class="image"><img src="img/11.jpg" alt=""></a>
+								</article>
+
+								<article class="item thumb span-1">
+									
+									<a href="img/12.jpg" class="image"><img src="img/12.jpg" alt=""></a>
+								</article>
+
+								<article class="item thumb span-1">
+									
+									<a href="img/13.jpg" class="image"><img src="img/13.jpg" alt=""></a>
+								</article>
+
+								<article class="item thumb span-3">
+								
+									<a href="img/14.jpg" class="image"><img src="img/14.jpg" alt=""></a>
+								</article>
+
+								<article class="item thumb span-1">
+								
+									<a href="img/15.jpg" class="image"><img src="img/15.jpg" alt=""></a>
+								</article>
+
+								<article class="item thumb span-2">
+							
+									<a href="img/16.jpg" class="image"><img src="img/16.jpg" alt=""></a>
+								</article>
+
+								<article class="item thumb span-2">
+								
+									<a href="img/18.jpg" class="image"><img src="img/18.jpg" alt=""></a>
+								</article>
+
+							</div>
+
+						<!-- Items -->
+							<div class="items">
+
+								<article class="item thumb span-3"><a href="img/a.jpg" class="image"><img src="img/a.jpg" alt=""></a></article>
+								<article class="item thumb span-1"><a href="img/d.jpg" class="image"><img src="img/d.jpg" alt=""></a></article>
+								<article class="item thumb span-2"><a href="img/c.jpg" class="image"><img src="img/c.jpg" alt=""></a></article>
+								<article class="item thumb span-2"><a href="img/frida.jpg" class="image"><img src="img/frida.jpg" alt=""></a></article>
+								<article class="item thumb span-1"><a href="img/h.jpg" class="image"><img src="img/h.jpg" alt=""></a></article>
+								<article class="item thumb span-2"><a href="img/e.jpg" class="image"><img src="img/e.jpg" alt=""></a></article>
+								<article class="item thumb span-1"><a href="img/ll.jpg" class="image"><img src="img/ll.jpg" alt=""></a></article>
+								<article class="item thumb span-2"><a href="img/p.jpg" class="image"><img src="img/p.jpg" alt=""></a></article>
+								<article class="item thumb span-1"><a href="img/j.jpg" class="image"><img src="img/j.jpg" alt=""></a></article>
+
+							</div>
+
+					</section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="blog-section">
+        <div class="section-header">
+
+            <p class="section-subtitle">کاوش در دنیای هنر دیجیتال، تکنیک‌های نوین و الهام‌بخش‌ترین آثار هنرمندان معاصر</p>
+        </div>
+
+        <div class="blog-container">
+            <!-- کارت اول -->
+            <div class="art-blog-card">
+                <div class="blog-image-wrapper">
+                    <span class="category-badge">هنر دیجیتال</span>
+                    <div class="blog-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>۱۵ تیر ۱۴۰۳</span>
+                    </div>
+                    <img src="img/11.jpg" alt="هنر دیجیتال" class="blog-image">
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">انقلاب هنر دیجیتال: از تصویرسازی تا واقعیت مجازی</h3>
+                    <p class="blog-excerpt">کاوش در تحول هنر دیجیتال و تأثیر آن بر خلق آثار هنری معاصر. بررسی تکنیک‌های نوین و ابزارهای پیشرفته که مرزهای خلاقیت را جابه‌جا کرده‌اند و هنرمندان را قادر می‌سازند تا ایده‌های پیچیده خود را به واقعیت تبدیل کنند.</p>
+                    
+                    <div class="blog-meta">
+                                                <div class="read-time">
+                            <i class="far fa-clock"></i>
+                            <span>۶ دقیقه</span>
+                        </div>
+                    </div>
+                    
+                    <a href="single-blog.html"><button class="read-more">
+                        <span>مطالعه مقاله</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </button></a>
+                </div>
+            </div>
+
+            <!-- کارت دوم -->
+            <div class="art-blog-card">
+                <div class="blog-image-wrapper">
+                    <span class="category-badge">NFT و هنر</span>
+                    <div class="blog-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>۸ تیر ۱۴۰۳</span>
+                    </div>
+                    <img src="img/12.jpg" alt="NFT و هنر" class="blog-image">
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">NFT چگونه بازار هنر را متحول کرد؟</h3>
+                    <p class="blog-excerpt">بررسی تأثیر توکن‌های غیرمثلی (NFT) بر اقتصاد هنر و ایجاد فرصت‌های جدید برای هنرمندان دیجیتال. تحلیل موفقیت‌های بزرگ و چالش‌های پیش‌رو در این حوزه نوظهور که در حال تغییر تعاریف مالکیت هنری است.</p>
+                    
+                    <div class="blog-meta">
+                                               <div class="read-time">
+                            <i class="far fa-clock"></i>
+                            <span>۸ دقیقه</span>
+                        </div>
+                    </div>
+                    
+                    <a href="single-blog.html"><button class="read-more">
+                        <span>مطالعه مقاله</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </button></a>
+                </div>
+            </div>
+
+            <!-- کارت سوم -->
+            <div class="art-blog-card">
+                <div class="blog-image-wrapper">
+                    <span class="category-badge">تکنیک‌های پیشرفته</span>
+                    <div class="blog-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>۱ تیر ۱۴۰۳</span>
+                    </div>
+                    <img src="img/15.jpg" alt="تکنیک‌های پیشرفته" class="blog-image">
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">رندرینگ سه‌بعدی در هنر معاصر: راهنمای جامع</h3>
+                    <p class="blog-excerpt">مراحل خلق آثار هنری سه‌بعدی حرفه‌ای از ایده‌پردازی تا رندر نهایی. معرفی نرم‌افزارها و پلاگین‌های ضروری برای هنرمندان دیجیتال که به دنبال خلق آثار واقع‌گرایانه و تأثیرگذار هستند.</p>
+                    
+                    <div class="blog-meta">
+   
+                        <div class="read-time">
+                            <i class="far fa-clock"></i>
+                            <span>۱۰ دقیقه</span>
+                        </div>
+                    </div>
+                    
+                    <a href="single-blog.html"><button class="read-more">
+                        <span>مطالعه مقاله</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </button></a>
                 </div>
             </div>
         </div>
 
-        <!-- کارت‌های بلاگ -->
-        <div class="row g-4" id="latestBlogsContainer">
-            <!-- بلاگ‌ها با JavaScript ساخته می‌شوند -->
-        </div>
+           </section>
 
-        <!-- دکمه مشاهده همه -->
-        <div class="row mt-5">
-            <div class="col-12 text-center">
-                <a href="archive-blog.html" class="btn-view-all">
-                   <i class="fas fa-list me-2"></i>
-                    مشاهده همه مقالات
-                    <i class="fas fa-arrow-left ms-2"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+
+
+
 
 
 
@@ -277,13 +466,6 @@
             </div>
     </div>
 </section>
-
-
-
-
-
-
-
 
 
 <footer class="beautiful-footer">
@@ -368,9 +550,418 @@
     </button>
 
 
-<!-- Bootstrap JS Local -->
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/main.js"></script>
+
+<script>
+    // تابع مدیریت لودینگ
+    function initPageLoader() {
+        const loader = document.getElementById('pageLoader');
+        const progressBar = document.getElementById('progressBar');
+        const progressPercent = document.getElementById('progressPercent');
+        
+        // ایجاد ذرات
+        createParticles();
+        
+        // شبیه‌سازی پیشرفت
+        let progress = 0;
+        const interval = setInterval(() => {
+            progress += Math.random() * 15;
+            if (progress > 100) progress = 100;
+            
+            progressBar.style.width = `${progress}%`;
+            progressPercent.textContent = `${Math.floor(progress)}%`;
+            
+            if (progress >= 100) {
+                clearInterval(interval);
+                
+                // تأخیر قبل از مخفی کردن لودینگ
+                setTimeout(() => {
+                    loader.classList.add('hidden');
+                    
+                    // حذف لودینگ از DOM پس از انیمیشن
+                    setTimeout(() => {
+                        loader.style.display = 'none';
+                        
+                        // فعال‌سازی انیمیشن‌های صفحه
+                        triggerPageAnimations();
+                    }, 500);
+                }, 500);
+            }
+        }, 100);
+    }
+    
+    // تابع ایجاد ذرات
+    function createParticles() {
+        const particlesContainer = document.createElement('div');
+        particlesContainer.className = 'loader-particles';
+        document.querySelector('.page-loader').appendChild(particlesContainer);
+        
+        const particleCount = 20;
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            
+            // اندازه تصادفی
+            const size = Math.random() * 6 + 2;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            
+            // موقعیت تصادفی
+            particle.style.left = `${Math.random() * 100}%`;
+            
+            // تاخیر انیمیشن
+            particle.style.animationDelay = `${Math.random() * 3}s`;
+            
+            // شفافیت
+            particle.style.opacity = `${Math.random() * 0.5 + 0.2}`;
+            
+            particlesContainer.appendChild(particle);
+        }
+    }
+    
+    // تابع فعال‌سازی انیمیشن‌های صفحه
+    function triggerPageAnimations() {
+        // اضافه کردن کلاس انیمیشن به المنت‌های صفحه
+        document.querySelectorAll('.fade-in').forEach((el, index) => {
+            el.style.animationDelay = `${index * 0.1}s`;
+            el.classList.add('animate');
+        });
+        
+        // راه‌اندازی دیگر انیمیشن‌های صفحه
+        if (typeof initPageFeatures === 'function') {
+            initPageFeatures();
+        }
+    }
+    
+    // راه‌اندازی لودینگ پس از بارگذاری کامل صفحه
+    window.addEventListener('load', function() {
+        // تأخیر کوچک برای نمایش بهتر لودینگ
+        setTimeout(initPageLoader, 300);
+    });
+    
+    // اگر صفحه خیلی سریع لود شد
+    document.addEventListener('DOMContentLoaded', function() {
+        // اگر صفحه قبلاً لود شده باشد
+        if (document.readyState === 'complete') {
+            setTimeout(initPageLoader, 300);
+        }
+    });
+    
+    // تابع نمایش مجدد لودینگ (برای تغییر صفحه)
+    function showLoader() {
+        const loader = document.getElementById('pageLoader');
+        if (loader) {
+            loader.style.display = 'flex';
+            loader.classList.remove('hidden');
+            
+            // ریست پیشرفت
+            const progressBar = document.getElementById('progressBar');
+            const progressPercent = document.getElementById('progressPercent');
+            if (progressBar && progressPercent) {
+                progressBar.style.width = '0%';
+                progressPercent.textContent = '0%';
+            }
+        }
+    }
+    
+    // تابع مخفی کردن لودینگ (برای مواقع ضروری)
+    function hideLoader() {
+        const loader = document.getElementById('pageLoader');
+        if (loader) {
+            loader.classList.add('hidden');
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
+        }
+    }
+    
+    // در صورت نیاز لودینگ برای AJAX
+    document.addEventListener('ajaxStart', showLoader);
+    document.addEventListener('ajaxStop', hideLoader);
+
+
+
+
+
+
+
+// انیمیشن شمارنده
+document.addEventListener('DOMContentLoaded', function() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    const animateCounter = (element) => {
+        const target = parseInt(element.getAttribute('data-count'));
+        const duration = 2000; // 2 ثانیه
+        const increment = target / (duration / 16); // 60 فریم در ثانیه
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                element.textContent = formatNumber(target);
+                clearInterval(timer);
+            } else {
+                element.textContent = formatNumber(Math.floor(current));
+            }
+        }, 16);
+    };
+    
+    const formatNumber = (num) => {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    };
+   
+
+ 
+    // مشاهده عناصر هنگام اسکرول
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    statNumbers.forEach(number => {
+        observer.observe(number);
+    });
+});
+ // دریافت المان دکمه
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        
+        // هنگامی که کاربر اسکرول می‌کند، وضعیت دکمه را بررسی کن
+        window.addEventListener("scroll", function() {
+            // اگر کاربر به اندازه 300px پایین رفته باشد، دکمه را نشان بده
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add("show");
+            } else {
+                scrollToTopBtn.classList.remove("show");
+            }
+        });
+        
+        // وقتی کاربر روی دکمه کلیک می‌کند، به بالای صفحه برو
+        scrollToTopBtn.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+
+
+    // داده‌های جدیدترین بلاگ‌ها
+    const latestBlogs = [
+        {
+            id: 1,
+            title: "تکنیک‌های پیشرفته نقاشی با آبرنگ",
+            excerpt: "آموزش کامل تکنیک‌های حرفه‌ای نقاشی با آبرنگ شامل لایه‌گذاری، ترکیب رنگ و ایجاد بافت‌های طبیعی.",
+            image: "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            category: "نقاشی",
+            date: "۲ روز پیش",
+            author: {
+                name: "مریم کریمی",
+                avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                role: "هنرمند نقاش"
+            },
+            views: 1245,
+            comments: 23,
+            readTime: "۸ دقیقه"
+        },
+        {
+            id: 2,
+            title: "طراحی UI/UX برای اپلیکیشن‌های هنری",
+            excerpt: "اصول طراحی رابط کاربری برای اپلیکیشن‌های حوزه هنر با تمرکز بر تجربه کاربری هنرمندان.",
+            image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            category: "طراحی",
+            date: "۴ روز پیش",
+            author: {
+                name: "علی رضایی",
+                avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                role: "طراح UI/UX"
+            },
+            views: 892,
+            comments: 15,
+            readTime: "۶ دقیقه"
+        },
+        {
+            id: 3,
+            title: "تأثیر هنر معاصر بر جامعه امروز",
+            excerpt: "بررسی نقش هنر معاصر در شکل‌گیری فرهنگ و هویت اجتماعی با نگاهی به آثار هنرمندان برجسته.",
+            image: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            category: "هنر معاصر",
+            date: "۱ هفته پیش",
+            author: {
+                name: "سارا محمدی",
+                avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                role: "منتقد هنری"
+            },
+            views: 1567,
+            comments: 34,
+            readTime: "۱۰ دقیقه"
+        },
+        {
+            id: 4,
+            title: "آموزش عکاسی پرتره با نور طبیعی",
+            excerpt: "راهنمای کامل عکاسی پرتره با استفاده از نور طبیعی و تکنیک‌های ترکیب‌بندی حرفه‌ای.",
+            image: "https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            category: "عکاسی",
+            date: "۲ هفته پیش",
+            author: {
+                name: "رضا احمدی",
+                avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                role: "عکاس حرفه‌ای"
+            },
+            views: 2103,
+            comments: 42,
+            readTime: "۱۲ دقیقه"
+        },
+        {
+            id: 5,
+            title: "اصول مینیمالیسم در طراحی گرافیک",
+            excerpt: "آشنایی با اصول مینیمالیسم و کاربرد آن در طراحی گرافیک و برندینگ معاصر.",
+            image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            category: "طراحی گرافیک",
+            date: "۳ هفته پیش",
+            author: {
+                name: "نازنین جعفری",
+                avatar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                role: "گرافیست"
+            },
+            views: 1789,
+            comments: 28,
+            readTime: "۷ دقیقه"
+        },
+        {
+            id: 6,
+            title: "تکنولوژی‌های جدید در هنر دیجیتال",
+            excerpt: "مروری بر آخرین تکنولوژی‌ها و ابزارهای حوزه هنر دیجیتال و تأثیر آن بر خلق آثار هنری.",
+            image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            category: "هنر دیجیتال",
+            date: "۱ ماه پیش",
+            author: {
+                name: "محمد حسینی",
+                avatar: "https://images.unsplash.com/photo-1507591064344-4c6ce005-128?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                role: "هنرمند دیجیتال"
+            },
+            views: 2345,
+            comments: 51,
+            readTime: "۱۱ دقیقه"
+        }
+    ];
+
+    // تابع ساخت کارت بلاگ
+    function createBlogCard(blog) {
+        return `
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <span class="blog-category">${blog.category}</span>
+                        <img src="img/o.jpg" alt="${blog.title}">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">
+                            <i class="far fa-calendar-alt"></i>
+                            ${blog.date}
+                            <span style="margin: 0 10px;">•</span>
+                            <i class="far fa-clock"></i>
+                            ${blog.readTime}
+                        </div>
+                        <h3 class="blog-title">${blog.title}</h3>
+                        <p class="blog-excerpt">${blog.excerpt}</p>
+                        
+ 
+                        
+
+                            <a href="single-blog.html" class="read-more-btn">
+                                ادامه مطلب
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+
+
+
+
+
+
+
+
+const items = document.querySelectorAll('.artx-coverflow__item');
+const next = document.querySelector('.artx-next');
+const prev = document.querySelector('.artx-prev');
+const scene = document.querySelector('.artx-coverflow__scene');
+
+let index = Math.floor(items.length / 2);
+let autoScrollInterval;
+let isPaused = false;
+
+function updateCoverflow() {
+  items.forEach((item, i) => {
+    const offset = i - index;
+    item.style.setProperty('--i', offset);
+    item.classList.toggle('artx-active', offset === 0);
+  });
+}
+
+function startAutoScroll() {
+  autoScrollInterval = setInterval(() => {
+    if (isPaused) return;
+
+    index++;
+    if (index >= items.length) {
+      index = items.length - 1;
+      clearInterval(autoScrollInterval);
+
+      // مکث سینمایی در انتها
+      setTimeout(() => {
+        index = 0;
+        updateCoverflow();
+        startAutoScroll();
+      }, 2500);
+    }
+
+    updateCoverflow();
+  }, 4200); // ریتم سینمایی
+}
+
+function stopAutoScroll() {
+  clearInterval(autoScrollInterval);
+}
+
+next.onclick = () => {
+  stopAutoScroll();
+  index = Math.min(index + 1, items.length - 1);
+  updateCoverflow();
+  startAutoScroll();
+};
+
+prev.onclick = () => {
+  stopAutoScroll();
+  index = Math.max(index - 1, 0);
+  updateCoverflow();
+  startAutoScroll();
+};
+
+/* مکث موقع تعامل */
+scene.addEventListener('mouseenter', () => isPaused = true);
+scene.addEventListener('mouseleave', () => isPaused = false);
+
+updateCoverflow();
+startAutoScroll();
+
+     </script>
+			<script src="js/jquery.min.js"></script>
+			<script src="js/jquery.poptrox.min.js"></script>
+			<script src="js/browser.min.js"></script>
+			<script src="js/breakpoints.min.js"></script>
+			<script src="js/util.js"></script>
+			<script src="js/main.js"></script>
+<script src="js/base.js"></script>
+
 
 </body>
 </html>
